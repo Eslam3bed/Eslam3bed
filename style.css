@@ -1,134 +1,163 @@
-html,
-body {
-    width: 100%;
-    height: 100%;
+body{
+    margin: 0px;
+    padding: 0px;
+    background:linear-gradient(#ffaf3b, #ffae3b, #ffaf3b);
+    font-family: 'Fredoka One', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-body {
-    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+.page-content{
+    color: #607D8B;
+    width: 70%;
+}
+.content-box{
+    margin: 80px 0px;
+    padding: 25px 20px 10px 20px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 10px 25px 10px #00000022;
+}
+.header{
+        display: flex;    
+        margin-bottom: 60px;
+}
+.header-child{
+    flex:1;
+}
+.header-child:nth-last-child(1){
+    flex:2;
+    display: flex;
+    justify-content: flex-end;
+}
+.website-name{
+    font-weight: bold;
+    letter-spacing: 1.3px;
+}
+.website-name > i{
+    text-decoration: none;
+    font-style: normal;
+    line-height: 10px;
+}
+.header-link{
+    margin: 0px 15px;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.text-vertical-center {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
+.body{
+    display: flex;
+    
 }
-
-.text-vertical-center h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 4.5em;
-    font-weight: 700;
+.body-sidebar{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
-
-
-.btn-dark {
-    border-radius: 0;
-    color: #fff;
-    background-color: rgba(0,0,0,0.4);
+.body-title {
+    font-size: 13px;
+    color: #80808085;
+    letter-spacing: 1px;
 }
-
-.btn-dark:hover,
-.btn-dark:focus,
-.btn-dark:active {
-    color: #fff;
-    background-color: rgba(0,0,0,0.7);
+.hashed-menu-item{
+    height: 4px;
+    width: 40px;
+    background: rgba(128, 128, 128, 0.465);
+    margin: 4px 0px;
+    cursor: pointer;
+    transition:all 350ms ease-in-out;
 }
-
-.btn-light {
-    border-radius: 0;
-    color: #333;
-    background-color: rgb(255,255,255);
+.hashed-menu-item:hover{
+    width: 60px;
+    background: #ffab5199;
 }
-
-.btn-light:hover,
-.btn-light:focus,
-.btn-light:active {
-    color: #333;
-    background-color: rgba(255,255,255,0.8);
+.active-item{
+    width: 60px;
+    background: #ffab5199;
 }
-
-
-
-hr.small {
-    max-width: 100px;
+.body-content{
+    flex:8;
+    margin-left: 25px;
 }
-
-
-
-
-
-.header {
-    display: table;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: url(https://www.divinewrite.com.au/wp-content/themes/divinewrite/images/portfolio-image.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+.join-us-btn {
+    color: #f7ad3c;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    padding: 5px 10px;
+    border: 1px solid #f7ad3c;
+    cursor: pointer;
+    border-radius: 20px;
 }
-
-/* About */
-
-.about {
-    padding: 50px 0;
+span.transparence-text {
+        font-size: 13px;
+    letter-spacing: 1px;
+    color: #80808085;
 }
-
-
-
-.callout {
-    display: table;
-    width: 100%;
-    height: 400px;
-    color: #fff;
-    background: url(http://www.perkinelmer.com/clinical-development-analytics/Images/Portfolio-1600x900_tcm150-188178.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-  opacity: .7;
+span.body-hashtags {
+    display: block;
+    margin: 10px 0px;
+    font-size: 13px;
+    word-spacing: 15px;
 }
-
-
-
-.portfolio {
-    padding: 50px 0;
-  display:block;
-  content:center;
-
+.body-content-message {
+    margin: 23px 0px;
+    font-size: 32px;
+    letter-spacing: 1px;
 }
-
-
-.portfolio-item {
-    margin-bottom: 30px;
-  
+.social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transition:all 350ms ease-in-out;
 }
-
-.img-portfolio {
-    margin:  auto;
-  
+.social-links .fab {
+    margin: 10px;
+    font-size: 10px;
+    transition: all 350ms ease-in-out;
+    cursor: pointer;
 }
-
-.img-portfolio:hover {
-    opacity: 0.8;
+.social-links .fab:hover{
+    color: #f7ad3c; 
 }
-
-footer {
-    padding: 100px 0;
+span.more-btn {
+    cursor: pointer;
+    margin: 18px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    background: #ffab51;
+    border-radius: 50%;
+    color: white;
+    box-shadow: 0px 6px 15px 0px #0000004a;
+    transition: all 350ms ease-in-out;
 }
-
-#to-top {
-  display: none;
-  position: fixed;
-  bottom: 5px;
-  right: 5px;
+span.more-btn:hover {
+    box-shadow: 0px 3px 11px 0px #0000005e;
 }
-.center {
-    margin: auto;
-    width: 50%;
-   
-    padding: 50px;
+.hide-element{
+    opacity: 0;
+}
+ a{
+    text-decoration: none;
+    color: inherit;
+}
+.my-photo-holder .avatar{
+    height: 80px;
+    width: auto;
+    border-radius: 50px;
+    cursor: pointer;
+    filter: grayscale(.5);
+    transition:all .4s ease-in-out;
+}
+.avatar:hover{
+    height: 100px;
+    filter: unset;
+    transform: rotate(360deg);
 }
