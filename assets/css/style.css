@@ -111,17 +111,18 @@ span.body-hashtags {
 }
 .social-links {
     display: flex;
-    flex-direction: column;
     align-items: flex-end;
     transition:all 350ms ease-in-out;
 }
-.social-links .fab {
+.social-links .fab,
+.social-links .far {
     margin: 10px;
-    font-size: 10px;
+    font-size: 13px;
     transition: all 350ms ease-in-out;
     cursor: pointer;
 }
-.social-links .fab:hover{
+.social-links .fab:hover,
+.social-links .far:hover{
     color: #f7ad3c; 
 }
 span.more-btn {
