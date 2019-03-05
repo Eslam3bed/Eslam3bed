@@ -23,7 +23,7 @@ body{
 }
 .header{
         display: flex;    
-        margin-bottom: 60px;
+        margin-bottom: 40px;
 }
 .header-child{
     flex:1;
