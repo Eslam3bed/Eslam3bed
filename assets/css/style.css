@@ -98,11 +98,10 @@ span.transparence-text {
     letter-spacing: 1px;
     color: #80808085;
 }
-span.body-hashtags {
-    display: block;
-    margin: 10px 0px;
-    font-size: 13px;
-    word-spacing: 15px;
+h2.body-hashtags {
+    font-size: 15px;
+    font-weight: 400;
+    word-spacing: 10px;
 }
 .body-content-message {
     margin: 23px 0px;
