@@ -117,11 +117,10 @@ span.transparence-text {
     letter-spacing: 1px;
     color: #917ba9;
 }
-
 h2.body-hashtags {
     margin-top: 20px;
-    font-size: 12px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 600;
     word-spacing: 10px;
 }
 
