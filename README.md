@@ -20,8 +20,8 @@
 - 📫 How to reach me: e.eslam3bed@gmail.com.
 - ⚡ Fun facts: 
   - I start my mornings resolving puzzles in [codingames.com](https://codingame.com) (clashing).
-  - Why do I often use this handle `eslam3bed` as username?
-    > Eslam3bed: Eslam Abed-elrahman, so the 3bed is replacment for Abed-elrahman and the 3 represent [**`ع`** ](https://www.quora.com/How-do-I-pronounce-the-Arabic-%D8%B9-letter) a litter that does not exist in english!, and the **3** is the closest shape for it .
+  - Why do I often use this handle `eslam3bed` as a username?
+    > Eslam3bed: Eslam Abed-elrahman, so the 3bed is replacement for Abed-elrahman and the 3 represent [**`ع`** ](https://www.quora.com/How-do-I-pronounce-the-Arabic-%D8%B9-letter) a litter that does not exist in english!, and the **3** is the closest shape for it!
 - <details>
   <summary>
       Some of the things I usually work with:
@@ -55,8 +55,7 @@
 
 
 ----
-<!-- #### Coding Stats -->
+#### Coding Stats
 
 <!--START_SECTION:waka-->
-
 <!--END_SECTION:waka-->
