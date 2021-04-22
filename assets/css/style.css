@@ -117,6 +117,7 @@ span.transparence-text {
     letter-spacing: 1px;
     color: #917ba9;
 }
+
 h2.body-hashtags {
     margin-top: 20px;
     font-size: 14px;
@@ -234,4 +235,16 @@ a {
 
 iframe {
     opacity: 0;
+}
+
+.status {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.status img {
+    margin: 20px 0;
+    max-width: 80%;
+    height: auto;
 }

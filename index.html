@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
-    <title>About Eslam.Dev</title>
+    <title>Eslam.Dev</title>
 </head>
 
 <body>
@@ -69,14 +69,29 @@
                             Strongly committed to all projects from inception right through to the end.
                         </span>
                         <h2 class="body-hashtags">
-                            #Nodejs(Express.js , SQL & NoSQL DB's,OAuth)
-                            <br/>
-                            #React(Components Patterns, Redux, Firebase)
-                            <br/>
-                            #DevOps(Design & build Systems infrastructures, familiar with AWS ,DigitalOcean & others)
-                            <br/>
-                            #javascript(#I_love_it)
+                            #Nodejs (Express.js, SQL & NoSQL DB's, OAuth)
+                            <br />
+                            #React (Components Patterns, Redux, Firebase)
+                            <br />
+                            #DevOps (Design & build Systems infrastructures, familiar with AWS, DigitalOcean & others)
+                            <br />
+                            #javascript (#I_love_it)
                         </h2>
+                        <div class='status'>
+                            <img id='codeStatus'
+                                src="https://github-readme-stats.vercel.app/api?username=eslam3bed&count_private=true&theme=radical&&show_icons=true&hide=contribs"
+                                alt="readme status">
+                            <script>
+                                function getRandomThemeForStatus() {
+                                    var themes = ['dark', 'radical', 'merko', 'gruvbox', 'tokyonight', 'onedark', 'cobalt', 'synthwave', 'highcontrast', 'dracula'];
+                                    var randomThemeName = themes[Math.floor(Math.random() * themes.length)];
+                                    var badgeUrl = `https://github-readme-stats.vercel.app/api?username=eslam3bed&count_private=true&theme=${randomThemeName}&&show_icons=true&hide=contribs`
+                                    return badgeUrl;
+                                }
+                                const image = document.getElementById('codeStatus');
+                                image.src = getRandomThemeForStatus();
+                            </script>
+                        </div>
                     </div>
                 </div>
             </div>
