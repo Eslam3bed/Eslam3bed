@@ -58,4 +58,7 @@
 #### Coding Stats
 
 <!--START_SECTION:waka-->
+```text
+Markdown   ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿   99.97 % 
+```
 <!--END_SECTION:waka-->
