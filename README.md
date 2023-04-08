@@ -16,7 +16,7 @@
 </center>
 
 
-- 🔭 I’m currently working as sr. frontend engineer at [weArt][1].
+- 🔭 I’m currently working as sr. frontend engineer at [SalesDash][1].
 - 📫 How to reach me: e.eslam3bed@gmail.com.
 - ⚡ Fun facts: 
   - I start my mornings resolving puzzles in [codingames.com](https://codingame.com) (clashing).
