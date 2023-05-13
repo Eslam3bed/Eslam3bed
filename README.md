@@ -51,7 +51,7 @@
   </details>
 
 
-[1]: https://weart.io/
+[1]: https://salesdash.ai/
 
 
 
