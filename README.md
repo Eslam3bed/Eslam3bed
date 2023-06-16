@@ -61,8 +61,7 @@
 <!--START_SECTION:waka-->
 
 ```txt
-TypeScript                   ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣀⣀   91.12 %
-Other                        ⣿⣿⣄⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀   08.88 %
+No activity tracked
 ```
 
 <!--END_SECTION:waka-->
