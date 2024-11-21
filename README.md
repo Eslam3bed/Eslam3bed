@@ -58,10 +58,6 @@ I specialize in creating and maintaining robust, end-to-end applications and mob
 [![Gmail Badge](https://img.shields.io/badge/-e.eslam3bed-c0392b?style=flat&labelColor=c0392b&logo=gmail&logoColor=white)](mailto:e.eslam3bed@gmail.com)
 
 ---
-
-![Eslam3bed's GitHub Stats](https://github-readme-stats.vercel.app/api?username=eslam3bed&count_private=true&theme=dracula&show_icons=true&hide=contribs)
-
-
 <details>
   <summary><strong>🛠️ Technologies & Tools</strong></summary>
 
