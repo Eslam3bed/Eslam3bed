@@ -10,7 +10,7 @@ I specialize in creating and maintaining robust, end-to-end applications and mob
 
 ### 🚀 Key Achievements
 
-- **Senior Full-Stack Engineer & Team Lead at [Salesdash.ai](https://salesdash.ai):**  
+- **Senior Full-Stack Engineer & Team Lead at [Revic.ai](https://revic.ai):**  
   - Promoted to Team Lead within 6 months for driving technical excellence.
   - Built a Slack bot interface and high-integrity debugging tools for data accuracy.
   - Collaborated with the ML team to deliver precise AI-driven insights.
