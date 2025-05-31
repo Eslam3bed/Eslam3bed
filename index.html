@@ -8,6 +8,16 @@
     <meta name="keywords" content="Full-Stack Developer, Web Engineer, React, TypeScript, Node.js" />
     <meta name="author" content="Eslam A. Hugair" />
     <title>Eslam A. Hugair - Full-Stack Web Engineer</title>
+    
+    <!-- Tailwind CSS recommended script to prevent FOUC -->
+    <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
