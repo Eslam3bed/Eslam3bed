@@ -1,4 +1,5 @@
 import { X, Globe } from 'lucide-react'
+import { createPortal } from 'react-dom'
 import { Button } from '@/components/ui/button'
 import { Project } from '@/data'
 
@@ -10,7 +11,7 @@ interface ProjectModalProps {
 export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
   if (!project) return null
 
-  return (
+  return createPortal(
     <div className="fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm" onClick={onClose}>
       <div
         className="
@@ -130,6 +131,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   )
 } 
