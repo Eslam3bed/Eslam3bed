@@ -51,13 +51,24 @@ export const AboutPage = () => {
           </div>
 
           <div className="flex flex-wrap justify-center gap-4 pt-6">
-            <Button className="bg-primary hover:bg-primary/90 dark:bg-primary-dark dark:hover:bg-primary-dark/90 text-primary-foreground dark:text-primary-dark-foreground">
-              <Mail className="mr-2 h-4 w-4" />
-              Let's Connect
+            <Button
+              asChild
+              className="bg-primary hover:bg-primary/90 dark:bg-primary-dark dark:hover:bg-primary-dark/90 text-primary-foreground dark:text-primary-dark-foreground"
+            >
+              <a href="mailto:e.eslam3bed@gmail.com?subject=I%20would%20like%20to%20hire%20you">
+                <Mail className="mr-2 h-4 w-4" />
+                Let's Connect
+              </a>
             </Button>
-            <Button variant="outline" className="border-border dark:border-border-dark hover:bg-muted dark:hover:bg-muted-dark">
-              <ExternalLink className="mr-2 h-4 w-4" />
-              View Resume
+            <Button
+              variant="outline"
+              asChild
+              className="border-border dark:border-border-dark hover:bg-muted dark:hover:bg-muted-dark"
+            >
+              <a href="https://eslam.dev/assets/files/eslam.dev.cv.pdf" target="_blank" rel="noopener noreferrer">
+                <ExternalLink className="mr-2 h-4 w-4" />
+                View Resume
+              </a>
             </Button>
           </div>
         </CardContent>
