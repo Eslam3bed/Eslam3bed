@@ -308,7 +308,7 @@ function App() {
       </header>
 
       {/* Main Content */}
-      <main className="pt-32 pb-8">
+      <main className="pt-44 pb-8">
         <div className="container mx-auto px-4">
 
           {/* About Tab */}
