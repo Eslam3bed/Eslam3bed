@@ -1,94 +1,143 @@
-## Hi, I'm Eslam Abed <img src="https://user-images.githubusercontent.com/1303154/88677602-1635ba80-d120-11ea-84d8-d263ba5fc3c0.gif" width="28px" alt="hi">
+# Eslam A. Hugair - Portfolio
 
-> **A passionate and accomplished Full-Stack Web Developer with a proven track record of delivering scalable, data-driven, and high-impact solutions.**
+A modern, professional, and mobile-first personal portfolio website showcasing my experience as a Full-Stack Web Engineer.
 
-### 👨‍💻 About Me
+## 🚀 Built With
 
-I specialize in creating and maintaining robust, end-to-end applications and mobile-friendly websites, with a strong focus on delivering rich user experiences. Throughout my career, I’ve collaborated with cross-functional teams to tackle complex challenges and provide innovative solutions, ensuring successful project delivery. My expertise spans front-end development, big data solutions, and DevOps integration, with a proven track record of leading teams, mentoring developers, and driving product growth.
+- **[Vite](https://vitejs.dev/)** - Next generation frontend tooling
+- **[React 19](https://react.dev/)** - A JavaScript library for building user interfaces
+- **[TypeScript](https://www.typescriptlang.org/)** - JavaScript with syntax for types
+- **[Tailwind CSS](https://tailwindcss.com/)** - A utility-first CSS framework
+- **[shadcn/ui](https://ui.shadcn.com/)** - Beautifully designed components built with Radix UI and Tailwind CSS
+- **[Lucide React](https://lucide.dev/)** - Beautiful & consistent icon toolkit
+
+## ✨ Features
+
+- **Modern Design**: Clean, accessible, and minimal design focused on clarity and professionalism
+- **Mobile-First**: Responsive design that works perfectly on all devices
+- **Dark/Light Mode**: Theme toggle with system preference detection
+- **Performance Optimized**: Built with Vite for fast development and optimized production builds
+- **Accessible**: Built with accessibility in mind using shadcn/ui components
+- **SEO Friendly**: Proper meta tags and semantic HTML structure
+
+## 📋 Sections
+
+1. **Hero Section** - Name, title, and contact actions
+2. **About** - Professional summary and experience overview
+3. **Work Experience** - Detailed work history with achievements
+4. **Selected Projects** - Showcase of meaningful projects
+5. **Skills** - Organized by technology categories
+6. **Footer** - Professional links and contact information
+
+## 🛠️ Development
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Eslam3bed/my-portfolio.git
+cd my-portfolio
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
+npm run dev
+```
+
+4. Open [http://localhost:5173](http://localhost:5173) in your browser
+
+### Building for Production
+
+```bash
+npm run build
+```
+
+The built files will be in the `dist` directory.
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## 🚀 Deployment
+
+This portfolio is automatically deployed to GitHub Pages using GitHub Actions. The deployment workflow:
+
+1. Triggers on pushes to `master` or `main` branch
+2. Builds the project using Vite
+3. Deploys to GitHub Pages
+
+### Manual Deployment
+
+To deploy manually:
+
+1. Build the project: `npm run build`
+2. Deploy the `dist` folder to your hosting provider
+
+## 📁 Project Structure
+
+```
+src/
+├── components/
+│   └── ui/           # shadcn/ui components
+├── lib/
+│   └── utils.ts      # Utility functions
+├── App.tsx           # Main application component
+├── main.tsx          # Application entry point
+└── index.css         # Global styles and Tailwind imports
+```
+
+## 🎨 Customization
+
+### Colors and Theming
+
+The project uses CSS variables for theming. You can customize colors in `src/index.css`:
+
+```css
+:root {
+  --primary: 221.2 83.2% 53.3%;
+  --secondary: 210 40% 96%;
+  /* ... other variables */
+}
+```
+
+### Content
+
+Update the content in `src/App.tsx`:
+
+- Personal information in the hero section
+- Work experience data
+- Projects information
+- Skills categories
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/Eslam3bed/my-portfolio/issues).
+
+## 📞 Contact
+
+- **Email**: [e.eslam3bed@gmail.com](mailto:e.eslam3bed@gmail.com)
+- **LinkedIn**: [linkedin.com/in/eslam3bed](https://www.linkedin.com/in/eslam3bed/)
+- **GitHub**: [github.com/Eslam3bed](https://github.com/Eslam3bed)
 
 ---
 
-### 🚀 Key Achievements
-
-- **Senior Full-Stack Engineer & Team Lead at [Revic.ai](https://revic.ai):**  
-  - Promoted to Team Lead within 6 months for driving technical excellence.
-  - Built a Slack bot interface and high-integrity debugging tools for data accuracy.
-  - Collaborated with the ML team to deliver precise AI-driven insights.
-  - Developed scalable data ingestion services using Azure Functions, Elasticsearch, and Cognito.
-
-- **Senior Front-End Developer at [WeArt.io](https://weart.io):**  
-  - Revamped a real estate project by implementing a refactoring plan to reduce technical debt.
-  - Enhanced product performance and developed responsive UI components.
-  - Worked with Next.js, GraphQL, and AWS to deliver quality solutions.
-
-- **Team Lead and CTO at [LeadCart.io](https://web.archive.org/web/20211129084118/https://leadcart.io):**  
-  - Designed and implemented a custom component library for the product.
-  - Delivered a robust affiliate system within one month, from ideation to production.
-  - Achieved 99.9% uptime by automating DevOps processes with GitHub Actions.
-  - Grew the team, conducted interviews, and mentored junior developers.
-
-- **Full-Stack Engineer at [Zaino](https://zaino.app):**  
-  - Built a mobile-friendly web app and Google Ads integration for campaign management.
-  - Designed a customer support dashboard with real-time capabilities using Socket.io.
-  - Developed APIs and admin tools for audience segmentation and notification management.
-
----
-
-### 💼 Technical Expertise
-
-#### Languages & Frameworks
-- **Proficient:** JavaScript, TypeScript, Node.js, React, Next.js, HTML5, CSS3.  
-- **Experienced:** Redux, SASS, Socket.io, JWT, Remix.js, Express.js.
-
-#### Tools & Platforms
-- **Development:** Visual Studio Code, Figma, Adobe XD, CodeSandbox, Repl.it.  
-- **Cloud & Hosting:** AWS, Azure, Netlify, Firebase, Google Cloud, Vercel.  
-- **CI/CD & DevOps:** GitHub Actions, Jenkins, Docker, scalable server management.
-
-#### Databases & Big Data
-- **Databases:** MongoDB, PostgreSQL, MySQL, CosmosDB, Redis.  
-- **Big Data Solutions:** Elasticsearch, Kafka, scalable data ingestion pipelines.
-
----
-
-### 📫 Connect with Me
-
-[![LinkedIn Badge](https://img.shields.io/badge/-Eslam3bed-0e76a8?style=flat&labelColor=0e76a8&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/eslam3bed/) 
-[![GitHub Badge](https://img.shields.io/badge/-eslam3bed-171515?style=flat&labelColor=171515&logo=github&logoColor=white)](https://github.com/eslam3bed) 
-[![Gmail Badge](https://img.shields.io/badge/-e.eslam3bed-c0392b?style=flat&labelColor=c0392b&logo=gmail&logoColor=white)](mailto:e.eslam3bed@gmail.com)
-
----
-<details>
-  <summary><strong>🛠️ Technologies & Tools</strong></summary>
-
-  #### Programming Languages
-  ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) 
-  ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) 
-  ![Node.js](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) 
-  ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) 
-  ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-
-  #### Frameworks & Libraries
-  ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) 
-  ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white) 
-  ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) 
-  ![Socket.io](https://img.shields.io/badge/Socket.io-black?style=for-the-badge&logo=socket.io&badgeColor=010101)
-
-  #### Design Tools
-  ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) 
-  ![Adobe XD](https://img.shields.io/badge/Adobe%20XD-470137?style=for-the-badge&logo=Adobe%20XD&logoColor=#FF61F6) 
-
-  #### IDEs & Platforms
-  ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) 
-  ![Repl.it](https://img.shields.io/badge/Repl.it-%230D101E.svg?style=for-the-badge&logo=replit&logoColor=white)
-
-  #### Hosting Platforms
-  ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) 
-  ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7) 
-  ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
-
-  #### Databases
-  ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) 
-  ![PostgreSQL](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
-
-</details>
+Built with ❤️ by [Eslam A. Hugair](https://github.com/Eslam3bed)
