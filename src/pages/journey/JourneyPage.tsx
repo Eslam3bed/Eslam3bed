@@ -2,35 +2,82 @@ import { useState } from 'react'
 import { Briefcase, Calendar, MapPin, ArrowRight, ExternalLink } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { ProjectModal } from '@/components/common/ProjectModal'
+import { PageTransition } from '@/components/common'
 import { workExperience, Project } from '@/data'
 
 export const JourneyPage = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
   return (
-    <div className="animate-fade-in">
+    <PageTransition>
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold mb-4">My Professional Journey</h2>
-        <p className="text-muted-foreground dark:text-muted-dark-foreground">A timeline of growth, innovation, and impact</p>
+        <h2 className="
+          text-3xl font-bold mb-4
+          bg-gradient-to-r from-foreground via-blue-600 to-foreground 
+          dark:from-foreground-dark dark:via-blue-400 dark:to-foreground-dark 
+          bg-clip-text text-transparent
+        ">
+          My Professional Journey
+        </h2>
+        <p className="text-muted-foreground dark:text-muted-dark-foreground">
+          A timeline of growth, innovation, and impact
+        </p>
       </div>
 
       <div className="max-w-4xl mx-auto">
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-muted-foreground to-border dark:from-primary-dark dark:via-muted-dark-foreground dark:to-border-dark"></div>
+          <div className="
+            absolute left-8 top-0 bottom-0 w-1 
+            bg-gradient-to-b from-blue-500 via-blue-400 to-blue-300 
+            dark:from-blue-400 dark:via-blue-500 dark:to-blue-600
+            rounded-full
+            shadow-lg shadow-blue-500/25
+          "></div>
 
           {workExperience.map((job) => (
             <div key={job.id} className="relative mb-12 last:mb-0">
               {/* Timeline dot */}
-              <div className="absolute left-6 w-5 h-5 bg-primary dark:bg-primary-dark rounded-full border-4 border-background dark:border-background-dark shadow-lg shadow-primary/25 dark:shadow-primary-dark/25 z-10"></div>
+              <div className="
+                absolute left-6 w-6 h-6 
+                bg-gradient-to-br from-blue-500 to-blue-600 
+                dark:from-blue-400 dark:to-blue-500 
+                rounded-full border-4 border-white 
+                dark:border-background-dark 
+                shadow-xl shadow-blue-500/30 
+                z-10
+              "></div>
 
               {/* Content */}
               <div className="ml-20">
-                <Card className="border-border dark:border-border-dark hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary-dark/5 transition-all duration-300 bg-card dark:bg-card-dark">
-                  <CardHeader>
+                <Card className="
+                  border-white/20 dark:border-white/10 
+                  hover:shadow-2xl hover:shadow-blue-500/10 dark:hover:shadow-blue-400/10 
+                  transition-all duration-500 
+                  bg-white/70 dark:bg-card-dark/70
+                  backdrop-blur-xl
+                  group
+                  relative
+                  overflow-hidden
+                ">
+                  {/* Glass overlay effect */}
+                  <div className="
+                    absolute inset-0 
+                    bg-gradient-to-br from-white/20 via-blue-50/10 to-transparent 
+                    dark:from-white/5 dark:via-blue-950/20 dark:to-transparent
+                    pointer-events-none
+                  " />
+
+                  <CardHeader className="relative z-10">
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                       <div className="space-y-2">
-                        <CardTitle className="text-xl text-foreground dark:text-foreground-dark">{job.role}</CardTitle>
+                        <CardTitle className="
+                          text-xl text-foreground dark:text-foreground-dark
+                          group-hover:text-blue-600 dark:group-hover:text-blue-400
+                          transition-colors duration-300
+                        ">
+                          {job.role}
+                        </CardTitle>
                         <div className="flex items-center space-x-2 text-muted-foreground dark:text-muted-dark-foreground">
                           <Briefcase className="h-4 w-4" />
                           <span className="font-medium">{job.company}</span>
@@ -48,18 +95,23 @@ export const JourneyPage = () => {
                       </div>
                     </div>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="relative z-10">
                     <div className="space-y-4">
                       <ul className="space-y-2">
                         {job.highlights.map((highlight, idx) => (
                           <li key={idx} className="flex items-start space-x-2">
-                            <ArrowRight className="h-4 w-4 text-primary dark:text-primary-dark mt-0.5 flex-shrink-0" />
+                            <ArrowRight className="h-4 w-4 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
                             <span className="text-muted-foreground dark:text-muted-dark-foreground">{highlight}</span>
                           </li>
                         ))}
                       </ul>
 
-                      <div className="bg-muted/50 dark:bg-muted-dark/50 p-4 rounded-lg">
+                      <div className="
+                        bg-blue-50/50 dark:bg-blue-950/30 
+                        p-4 rounded-2xl
+                        border border-blue-200/30 dark:border-blue-800/30
+                        backdrop-blur-sm
+                      ">
                         <p className="text-sm">
                           <span className="font-medium text-foreground dark:text-foreground-dark">Technologies: </span>
                           <span className="text-muted-foreground dark:text-muted-dark-foreground">{job.technologies}</span>
@@ -75,13 +127,30 @@ export const JourneyPage = () => {
                               <button
                                 key={project.id}
                                 onClick={() => setSelectedProject(project)}
-                                className="text-left p-3 bg-muted/30 dark:bg-muted-dark/30 rounded-lg border border-border dark:border-border-dark hover:shadow-md transition-all duration-200 group"
+                                className="
+                                  text-left p-3 
+                                  bg-white/60 dark:bg-white/10 
+                                  rounded-2xl 
+                                  border border-blue-200/30 dark:border-blue-800/30 
+                                  hover:shadow-lg hover:shadow-blue-500/20
+                                  transition-all duration-300 
+                                  group/project
+                                  backdrop-blur-sm
+                                  hover:scale-105
+                                "
                               >
                                 <div className="flex items-center justify-between">
-                                  <span className="font-medium text-foreground dark:text-foreground-dark group-hover:text-primary dark:group-hover:text-primary-dark">
+                                  <span className="
+                                    font-medium text-foreground dark:text-foreground-dark 
+                                    group-hover/project:text-blue-600 dark:group-hover/project:text-blue-400
+                                    transition-colors duration-300
+                                  ">
                                     {project.name}
                                   </span>
-                                  <ExternalLink className="h-4 w-4 text-muted-foreground dark:text-muted-dark-foreground group-hover:text-primary dark:group-hover:text-primary-dark" />
+                                  <ExternalLink className="
+                                    h-4 w-4 text-muted-foreground dark:text-muted-dark-foreground 
+                                    group-hover/project:text-blue-600 dark:group-hover/project:text-blue-400
+                                  " />
                                 </div>
                                 <p className="text-sm text-muted-foreground dark:text-muted-dark-foreground mt-1">{project.description}</p>
                               </button>
@@ -99,6 +168,6 @@ export const JourneyPage = () => {
       </div>
 
       <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
-    </div>
+    </PageTransition>
   )
 } 
