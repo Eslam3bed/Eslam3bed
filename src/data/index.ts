@@ -14,6 +14,7 @@ export interface WorkExperience {
   id: string;
   role: string;
   company: string;
+  companyLink?: string;
   period: string;
   location: string;
   highlights: string[];
@@ -28,104 +29,209 @@ export interface SkillCategory {
   skills: string[];
 }
 
+export interface VolunteerExperience {
+  id: string;
+  role: string;
+  organization: string;
+  organizationLink?: string;
+  period: string;
+  location: string;
+  description: string;
+  achievements: string[];
+}
+
 // Work Experience Data
 export const workExperience: WorkExperience[] = [
   {
     id: "1",
-    role: "Senior Full-Stack Engineer & Team Lead",
-    company: "Revic.ai",
-    period: "2023 - Present",
-    location: "Remote",
+    role: "Sr. Full Stack Engineer & Team Lead",
+    company: "revic.ai",
+    companyLink: "https://revic.ai",
+    period: "Dec 2022 - Present",
+    location: "USA (Remote)",
     highlights: [
-      "Promoted to Team Lead within 6 months for driving technical excellence",
-      "Built Slack bot interface and high-integrity debugging tools for data accuracy",
-      "Collaborated with ML team to deliver precise AI-driven insights",
-      "Developed scalable data ingestion services using Azure Functions and Elasticsearch",
+      "Data-driven company using AI and data analysis to provide key insights about company departments",
+      "Built Slack bot interface to assess client's use cases and deliver high-end front-end solutions",
+      "Worked with ML team to provide high-integrity results and built debugging tools for data integrity",
+      "Developed various functionalities using Azure functions and worked with Cognito search and Elasticsearch for big data solutions",
+      "Built data ingestion services to stream data from various integration tools",
+      "Promoted to team lead after 6 months due to adaptability and performance in the fast-growing team",
     ],
-    technologies: "TypeScript, React, Node.js, Azure, Elasticsearch, Cognito",
+    technologies:
+      "TypeScript, Node.js, React.js, Azure Cloud Services, CosmosDB, MongoDB, Elasticsearch, Cognito Search",
     projects: [
       {
         id: "p1",
-        name: "AI Data Pipeline",
+        name: "AI Data Analytics Platform",
         role: "Tech Lead",
-        description: "Scalable data ingestion system with ML integration",
-        technologies: ["Azure Functions", "Elasticsearch", "TypeScript"],
+        description:
+          "Comprehensive data analytics platform with AI insights and Slack integration",
+        technologies: ["TypeScript", "Azure Functions", "React", "CosmosDB"],
         details:
-          "Built a robust data pipeline processing 10M+ records daily with 99.9% accuracy",
+          "Built scalable data pipeline processing millions of records with AI-driven insights",
       },
     ],
   },
   {
     id: "2",
-    role: "Senior Front-End Developer",
+    role: "Sr. Front End Developer",
     company: "WeArt.io",
-    period: "2022 - 2023",
-    location: "Remote",
+    companyLink: "https://weart.io/about.html",
+    period: "Feb 2022 - Dec 2022",
+    location: "Berlin, Germany (Remote)",
     highlights: [
-      "Revamped real estate project implementing refactoring plan to reduce technical debt",
-      "Enhanced product performance and developed responsive UI components",
-      "Worked with Next.js, GraphQL, and AWS to deliver quality solutions",
+      "Development Agency focused on making quality products",
+      "Recovered a real estate project by implementing a refactoring plan to reduce technical debt",
+      "Reduced maintenance costs and time needed to introduce new functionalities",
+      "Built & developed different features & responsive UI components",
+      "Improved product performance and user experience",
     ],
-    technologies: "Next.js, GraphQL, AWS, React, TypeScript",
+    technologies:
+      "TypeScript, Node.js, Next.js, AWS Fargate, Jenkins, Docker, MySQL, GraphQL",
     projects: [
       {
         id: "p2",
-        name: "Real Estate Platform",
+        name: "Real Estate Platform Overhaul",
         role: "Senior Developer",
-        description: "Complete platform overhaul with modern architecture",
-        technologies: ["Next.js", "GraphQL", "AWS"],
+        description:
+          "Complete refactoring and modernization of real estate platform",
+        technologies: ["Next.js", "GraphQL", "AWS", "Docker"],
         details:
-          "Reduced load times by 60% and improved user engagement by 40%",
+          "Successfully reduced technical debt and improved performance by 60%",
       },
     ],
   },
   {
     id: "3",
-    role: "Team Lead and CTO",
+    role: "Full Stack Web Developer & Team Lead → CTO",
     company: "LeadCart.io",
-    period: "2020 - 2022",
-    location: "Remote",
+    companyLink:
+      "https://web.archive.org/web/20211129084118/https://leadcart.io/",
+    period: "Aug 2018 - Jan 2021",
+    location: "Delaware, USA (Remote)",
     highlights: [
-      "Designed and implemented custom component library for the product",
-      "Delivered robust affiliate system within one month, from ideation to production",
-      "Achieved 99.9% uptime by automating DevOps processes with GitHub Actions",
-      "Grew the team, conducted interviews, and mentored junior developers",
+      "Cart Solution Startup focused on boosting conversions for customer sales using targeted funnels",
+      "Built custom components design system with React.js to fulfill product design & functional requirements",
+      "Created utility packages for reusable functionalities across product services",
+      "Handled DevOps using automation tools like GitHub Actions, achieved 99.9% uptime across product lifespan",
+      "Promoted to Team Lead within one year, then CTO the following year due to commitment and technical expertise",
+      "Managed technical support and served as interface for product community on Facebook & LeadCart knowledge base",
+      "Led hiring and team growth to 5+ members, conducted assessments and interviews, onboarded new team members",
+      "Built standalone affiliate system to track promoter commissions - expanded from idea to production in one month",
+      "Developed service to track customer activities, purchases, cart events, and lead capturing",
+      "Designed and developed payment integration facade for multiple third-party payment gateways",
     ],
-    technologies: "React, Node.js, MongoDB, GitHub Actions",
+    technologies:
+      "Node.js, React.js, AWS, GitHub Actions, Netlify, Next.js, TypeScript, MongoDB, PostgreSQL",
     projects: [
       {
         id: "p3",
-        name: "LeadCart Platform",
+        name: "LeadCart E-commerce Platform",
         role: "CTO & Tech Lead",
-        description: "Complete e-commerce solution with affiliate system",
-        technologies: ["React", "Node.js", "MongoDB"],
-        link: "https://leadcart.io",
-        details: "Built from scratch serving 50K+ users with 99.9% uptime",
+        description:
+          "Complete e-commerce solution with affiliate system and payment integrations",
+        technologies: ["React", "Node.js", "MongoDB", "AWS"],
+        link: "https://web.archive.org/web/20211129084118/https://leadcart.io/",
+        details:
+          "Built comprehensive platform serving 50K+ users with 99.9% uptime and multiple payment gateways",
+      },
+      {
+        id: "p3b",
+        name: "Affiliate Tracking System",
+        role: "Lead Developer",
+        description:
+          "Standalone affiliate system for tracking promoter commissions",
+        technologies: ["Node.js", "React", "MongoDB"],
+        details:
+          "Delivered complete affiliate system from concept to production in just one month",
       },
     ],
   },
   {
     id: "4",
-    role: "Full-Stack Engineer",
+    role: "FullStack Engineer & Team Lead",
     company: "Zaino",
-    period: "2019 - 2020",
-    location: "Remote",
+    companyLink: "https://zaino.app/",
+    period: "May 2016 - Sep 2019",
+    location: "Nazareth, Palestine",
     highlights: [
-      "Built mobile-friendly web app and Google Ads integration for campaign management",
-      "Designed customer support dashboard with real-time capabilities using Socket.io",
-      "Developed APIs and admin tools for audience segmentation and notification management",
+      "Platform to enhance Google AdWords customer experience with templates and optimizations",
+      "Designed & built mobile-friendly web app for Zaino clients to manage campaigns and design/launch banners",
+      "Built API and Google Ads integration services for creating, updating, and querying campaign reports",
+      "Developed admin console to control app preferences, manage ad fees, create audience segments, and manage notifications",
+      "Built customer support dashboard with Socket.io for better customer communication",
     ],
-    technologies: "React, Node.js, Socket.io, MongoDB",
+    technologies:
+      "Node.js, React.js, AWS, PostgreSQL, Google Ads API, Socket.io",
     projects: [
       {
         id: "p4",
-        name: "Campaign Manager",
+        name: "AdWords Campaign Manager",
         role: "Full-Stack Developer",
         description:
-          "Real-time campaign management with Google Ads integration",
-        technologies: ["React", "Socket.io", "Node.js"],
-        details: "Real-time dashboard processing 1M+ events daily",
+          "Comprehensive Google Ads campaign management platform with real-time support",
+        technologies: ["React", "Socket.io", "Node.js", "Google Ads API"],
+        link: "https://zaino.app/",
+        details:
+          "Complete platform for Google Ads management with real-time customer support and analytics",
       },
+    ],
+  },
+  {
+    id: "5",
+    role: "Front End Web Developer",
+    company: "Freelancer",
+    companyLink: "https://www.upwork.com/freelancers/eslam3bed",
+    period: "May 2016 - Oct 2018",
+    location: "Remote",
+    highlights: [
+      "Worked on different types of applications including web applications and Chrome extensions",
+      "Built 'Tawasol' web application for a local IT company using native front-end technologies",
+      "Developed Dropshipping consultant Chrome extension for e-commerce optimization",
+      "Created lead magnet kit for local client to boost marketing conversions",
+    ],
+    technologies:
+      "JavaScript, HTML5, CSS3, Chrome Extensions API, Native Web Technologies",
+    projects: [
+      {
+        id: "p5",
+        name: "Tawasol Web Application",
+        role: "Front-End Developer",
+        description: "Custom web application for local IT company",
+        technologies: ["JavaScript", "HTML5", "CSS3"],
+        details:
+          "Built comprehensive web application using native front-end technologies",
+      },
+      {
+        id: "p5b",
+        name: "Dropshipping Chrome Extension",
+        role: "Developer",
+        description:
+          "Chrome extension for dropshipping consultation and optimization",
+        technologies: ["JavaScript", "Chrome API"],
+        details:
+          "Developed browser extension to help users optimize their dropshipping businesses",
+      },
+    ],
+  },
+];
+
+// Volunteer Experience Data
+export const volunteerExperience: VolunteerExperience[] = [
+  {
+    id: "v1",
+    role: "Quality Assurance & Mentor",
+    organization: "Gaza Sky Geeks / Mercy Corps",
+    organizationLink: "https://gazaskygeeks.com/",
+    period: "Jun 2018 - Oct 2018",
+    location: "Gaza, Palestine",
+    description:
+      "A program of Mercy Corps, a leading global humanitarian agency working on some of the world's toughest challenges.",
+    achievements: [
+      "Mentored new graduates for the GSG code academy",
+      "Conducted quality assurance and code reviews for newly trained developers",
+      "Helped onboard junior developers into the tech ecosystem",
+      "Provided guidance on best practices and industry standards",
     ],
   },
 ];
