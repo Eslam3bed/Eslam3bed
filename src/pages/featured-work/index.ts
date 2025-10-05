@@ -1,0 +1,1 @@
+export { FeaturedWorkPage } from "./FeaturedWorkPage";

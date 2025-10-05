@@ -4,13 +4,22 @@
 
 ### 👨‍💻 About Me
 
-I specialize in creating and maintaining robust, end-to-end applications and mobile-friendly websites, with a strong focus on delivering rich user experiences. Throughout my career, I’ve collaborated with cross-functional teams to tackle complex challenges and provide innovative solutions, ensuring successful project delivery. My expertise spans front-end development, big data solutions, and DevOps integration, with a proven track record of leading teams, mentoring developers, and driving product growth.
+I specialize in creating and maintaining robust, end-to-end applications and mobile-friendly websites, with a strong focus on delivering rich user experiences. Throughout my career, I've collaborated with cross-functional teams to tackle complex challenges and provide innovative solutions, ensuring successful project delivery. My expertise spans front-end development, big data solutions, and DevOps integration, with a proven track record of leading teams, mentoring developers, and driving product growth.
 
 ---
 
 ### 🚀 Key Achievements
 
-- **Senior Full-Stack Engineer & Team Lead at [Revic.ai](https://revic.ai):**  
+- **Senior Front-End Engineer & DevOps at [Mannar.sa](https://mannar.sa):**  
+  - Maintained UI/UX and built the frontend architecture for Saudi Arabia's first online legal consultation platform.
+  - Ensured platform security, compliance, and performance across all layers.
+  - Managed infrastructure, monitoring, and DevOps operations.
+  - Built and optimized CI/CD pipelines to improve deployment speed.
+  - Scaled the platform from pilot to thousands of active users.
+  - Designed and developed the notification system for mannar.
+  - Implemented SEO scripts and post-build meta tag injection for better search visibility.
+
+- **Senior Full-Stack Engineer & Team Lead at [Revic.ai](https://revic.ai) (Sep 2023 - Sep 2025):**  
   - Promoted to Team Lead within 6 months for driving technical excellence.
   - Built a Slack bot interface and high-integrity debugging tools for data accuracy.
   - Collaborated with the ML team to deliver precise AI-driven insights.
@@ -42,7 +51,7 @@ I specialize in creating and maintaining robust, end-to-end applications and mob
 
 #### Tools & Platforms
 - **Development:** Visual Studio Code, Figma, Adobe XD, CodeSandbox, Repl.it.  
-- **Cloud & Hosting:** AWS, Azure, Netlify, Firebase, Google Cloud, Vercel.  
+- **Cloud & Hosting:** AWS, Azure, Netlify, Firebase, Google Cloud, Vercel, Supabase.  
 - **CI/CD & DevOps:** GitHub Actions, Jenkins, Docker, scalable server management.
 
 #### Databases & Big Data
@@ -86,9 +95,16 @@ I specialize in creating and maintaining robust, end-to-end applications and mob
   ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) 
   ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7) 
   ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
+  ![Railway](https://img.shields.io/badge/Railway-131415?style=for-the-badge&logo=railway&logoColor=white)
+  ![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white)
+  ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+  ![Hetzner](https://img.shields.io/badge/Hetzner-D50C2D?style=for-the-badge&logo=hetzner&logoColor=white)
 
   #### Databases
   ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) 
   ![PostgreSQL](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+  ![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)
+  ![DynamoDB](https://img.shields.io/badge/Amazon%20DynamoDB-4053D6?style=for-the-badge&logo=Amazon%20DynamoDB&logoColor=white)
+  ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
 
 </details>
