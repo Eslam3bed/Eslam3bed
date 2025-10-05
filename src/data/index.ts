@@ -43,11 +43,32 @@ export interface VolunteerExperience {
 // Work Experience Data
 export const workExperience: WorkExperience[] = [
   {
+    id: "0",
+    role: "Sr. Front End Engineer & DevOps",
+    company: "Mannar.sa",
+    companyLink: "https://mannar.sa/",
+    period: "Dec 2024 - Present",
+    location: "KSA (Remote)",
+    highlights: [
+      "Saudi Arabia's first online legal consultation platform, delivering digital access to legal services with a secure, scalable architecture",
+      "Maintained UI/UX and built the frontend architecture",
+      "Ensured platform security, compliance, and performance",
+      "Managed infrastructure, monitoring, and DevOps operations",
+      "Built and optimized CI/CD pipelines to improve deployment speed",
+      "Scaled the platform from pilot to thousands of active users",
+      "Designed and developed the notification system",
+      "Implemented SEO scripts and post-build meta tag injection for better search visibility",
+    ],
+    technologies:
+      "TypeScript, Node.js, React.js, AWS Services, Supabase, Firebase, MongoDB, CI/CD Pipeline",
+    projects: [],
+  },
+  {
     id: "1",
     role: "Sr. Full Stack Engineer & Team Lead",
     company: "revic.ai",
     companyLink: "https://revic.ai",
-    period: "Dec 2022 - Present",
+    period: "Dec 2022 - Sep 2024",
     location: "USA (Remote)",
     highlights: [
       "Data-driven company using AI and data analysis to provide key insights about company departments",
