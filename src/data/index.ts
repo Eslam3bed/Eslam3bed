@@ -302,6 +302,7 @@ export const skillCategories: SkillCategory[] = [
       "CSS3",
       "SASS",
       "Responsive Design",
+      "SEO Optimization",
     ],
   },
   {
@@ -318,6 +319,8 @@ export const skillCategories: SkillCategory[] = [
       "Socket.io",
       "Microservices",
       "API Design",
+      "Notification Systems",
+      "Firebase",
     ],
   },
   {
@@ -330,6 +333,8 @@ export const skillCategories: SkillCategory[] = [
       "MySQL",
       "Redis",
       "CosmosDB",
+      "Supabase",
+      "Firebase",
       "Elasticsearch",
       "Kafka",
       "Data Ingestion",
@@ -345,13 +350,15 @@ export const skillCategories: SkillCategory[] = [
       "Azure",
       "Google Cloud",
       "Docker",
-      "CI/CD",
+      "CI/CD Pipelines",
       "GitHub Actions",
       "Jenkins",
-      "Infrastructure as Code",
+      "Infrastructure Management",
+      "Platform Scaling",
+      "Monitoring & Logging",
+      "Security & Compliance",
       "Vercel",
       "Netlify",
-      "DigitalOcean",
     ],
   },
   {
@@ -383,12 +390,12 @@ export const calculateExperience = (): number => {
 export const navigationTabs = [
   { id: "about", label: "About Me", icon: "User", path: "/" },
   { id: "journey", label: "Journey", icon: "Briefcase", path: "/journey" },
-  {
-    id: "featured-work",
-    label: "Featured Work",
-    icon: "FolderOpen",
-    path: "/featured-work",
-  },
+  // {
+  //   id: "featured-work",
+  //   label: "Featured Work",
+  //   icon: "FolderOpen",
+  //   path: "/featured-work",
+  // },
   {
     id: "what-i-can-do",
     label: "What I Can Do",

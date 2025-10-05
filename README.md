@@ -10,7 +10,7 @@ I specialize in creating and maintaining robust, end-to-end applications and mob
 
 ### 🚀 Key Achievements
 
-- **Senior Front-End Engineer & DevOps at [Mannar.sa](https://mannar.sa) (Stealth Startup):**  
+- **Senior Front-End Engineer & DevOps at [Mannar.sa](https://mannar.sa):**  
   - Maintained UI/UX and built the frontend architecture for Saudi Arabia's first online legal consultation platform.
   - Ensured platform security, compliance, and performance across all layers.
   - Managed infrastructure, monitoring, and DevOps operations.
