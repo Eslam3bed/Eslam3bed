@@ -1,37 +1,45 @@
-import { User, Zap, Layers, Mail, ExternalLink } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { PageTransition } from '@/components/common'
-import { calculateExperience } from '@/data'
+import { useState } from "react";
+import { User, Zap, Layers, Mail, FileText } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { PageTransition, ResumeModal } from "@/components/common";
+import { calculateExperience } from "@/data";
+import resumePdf from "@/assets/files/eslam.dev.cv.pdf";
 
 export const AboutPage = () => {
-  const yearsOfExperience = calculateExperience()
+  const yearsOfExperience = calculateExperience();
+  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
   return (
     <PageTransition>
       <div className="space-y-8">
         <div className="text-center space-y-4 mb-12">
           <h2 className="text-4xl md:text-5xl font-bold">
-            <span className="
+            <span
+              className="
               bg-gradient-to-r from-foreground via-blue-600 to-foreground 
               dark:from-foreground-dark dark:via-blue-400 dark:to-foreground-dark 
               bg-clip-text text-transparent
-            ">
+            "
+            >
               Hi, I'm Eslam Abed
             </span>
             <span className="wave inline-block ml-2">👋</span>
           </h2>
-          <div className="
+          <div
+            className="
             flex items-center justify-center space-x-2 
             text-accent-foreground dark:text-accent-dark-foreground font-semibold
-          ">
+          "
+          >
             <Zap className="h-5 w-5" />
             <span>{yearsOfExperience}+ Years of Excellence</span>
             <Zap className="h-5 w-5" />
           </div>
         </div>
 
-        <Card className="
+        <Card
+          className="
           max-w-4xl mx-auto 
           border-white/20 dark:border-white/10
           shadow-2xl shadow-blue-500/10 dark:shadow-blue-400/10
@@ -41,22 +49,31 @@ export const AboutPage = () => {
           transition-all duration-300
           relative
           overflow-hidden
-        ">
+        "
+        >
           {/* Glass effect overlay */}
-          <div className="
+          <div
+            className="
             absolute inset-0 
             bg-gradient-to-br from-white/30 via-white/5 to-transparent 
             dark:from-white/10 dark:via-white/5 dark:to-transparent
             pointer-events-none
-          " />
+          "
+          />
 
           <CardContent className="p-8 space-y-6 relative z-10">
             <div className="text-lg text-muted-foreground dark:text-muted-dark-foreground leading-relaxed space-y-4">
               <p>
-                A passionate and accomplished <span className="text-blue-600 dark:text-blue-400 font-semibold">Full-Stack Web Developer</span> with a proven track record of delivering scalable, data-driven, and high-impact solutions.
+                A passionate and accomplished{" "}
+                <span className="text-blue-600 dark:text-blue-400 font-semibold">
+                  Full-Stack Web Developer
+                </span>{" "}
+                with a proven track record of delivering scalable, data-driven,
+                and high-impact solutions.
               </p>
 
-              <div className="
+              <div
+                className="
                 bg-gradient-to-r from-white/60 to-blue-50/60 
                 dark:from-white/10 dark:to-blue-950/30 
                 p-6 rounded-2xl 
@@ -64,17 +81,24 @@ export const AboutPage = () => {
                 backdrop-blur-md
                 hover:bg-blue-50/30 dark:hover:bg-blue-950/40
                 transition-all duration-300
-              ">
+              "
+              >
                 <h3 className="font-semibold text-foreground dark:text-foreground-dark mb-3 flex items-center">
                   <User className="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400" />
                   About Me
                 </h3>
                 <p>
-                  I specialize in creating and maintaining robust, end-to-end applications and mobile-friendly websites, with a strong focus on delivering rich user experiences. Throughout my career, I've collaborated with cross-functional teams to tackle complex challenges and provide innovative solutions, ensuring successful project delivery.
+                  I specialize in creating and maintaining robust, end-to-end
+                  applications and mobile-friendly websites, with a strong focus
+                  on delivering rich user experiences. Throughout my career,
+                  I've collaborated with cross-functional teams to tackle
+                  complex challenges and provide innovative solutions, ensuring
+                  successful project delivery.
                 </p>
               </div>
 
-              <div className="
+              <div
+                className="
                 bg-gradient-to-r from-blue-50/60 to-white/60 
                 dark:from-blue-950/30 dark:to-white/10 
                 p-6 rounded-2xl 
@@ -82,13 +106,16 @@ export const AboutPage = () => {
                 backdrop-blur-md
                 hover:bg-blue-50/30 dark:hover:bg-blue-950/40
                 transition-all duration-300
-              ">
+              "
+              >
                 <h3 className="font-semibold text-foreground dark:text-foreground-dark mb-3 flex items-center">
                   <Layers className="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400" />
                   Expertise
                 </h3>
                 <p>
-                  My expertise spans front-end development, big data solutions, and DevOps integration, with a proven track record of leading teams, mentoring developers, and driving product growth.
+                  My expertise spans front-end development, big data solutions,
+                  and DevOps integration, with a proven track record of leading
+                  teams, mentoring developers, and driving product growth.
                 </p>
               </div>
             </div>
@@ -117,7 +144,7 @@ export const AboutPage = () => {
               </Button>
               <Button
                 variant="outline"
-                asChild
+                onClick={() => setIsResumeModalOpen(true)}
                 className="
                   border-blue-200 dark:border-blue-800 
                   hover:bg-blue-50 dark:hover:bg-blue-950/50
@@ -127,15 +154,19 @@ export const AboutPage = () => {
                   hover:scale-105
                 "
               >
-                <a href="https://eslam.dev/assets/files/eslam.dev.cv.pdf" target="_blank" rel="noopener noreferrer">
-                  <ExternalLink className="mr-2 h-4 w-4" />
-                  View Resume
-                </a>
+                <FileText className="mr-2 h-4 w-4" />
+                View Resume
               </Button>
             </div>
           </CardContent>
         </Card>
       </div>
+
+      <ResumeModal
+        isOpen={isResumeModalOpen}
+        onClose={() => setIsResumeModalOpen(false)}
+        pdfUrl={resumePdf}
+      />
     </PageTransition>
-  )
-} 
+  );
+};
