@@ -47,7 +47,7 @@ export const workExperience: WorkExperience[] = [
     role: "Sr. Front End Engineer & DevOps",
     company: "Mannar.sa",
     companyLink: "https://mannar.sa/",
-    period: "Dec 2024 - Present",
+    period: "Sep 2025 - Present",
     location: "KSA (Remote)",
     highlights: [
       "Saudi Arabia's first online legal consultation platform, delivering digital access to legal services with a secure, scalable architecture",
@@ -68,7 +68,7 @@ export const workExperience: WorkExperience[] = [
     role: "Sr. Full Stack Engineer & Team Lead",
     company: "revic.ai",
     companyLink: "https://revic.ai",
-    period: "Dec 2022 - Sep 2024",
+    period: "Dec 2022 - Sep 2025",
     location: "USA (Remote)",
     highlights: [
       "Data-driven company using AI and data analysis to provide key insights about company departments",
