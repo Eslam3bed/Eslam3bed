@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import { User, Briefcase, FolderOpen, Sparkles } from 'lucide-react'
 import { navigationTabs } from '@/data'
+import { useUserLocation } from '@/hooks'
 
 const iconMap = {
   User: <User className="h-4 w-4" />,
@@ -10,6 +11,16 @@ const iconMap = {
 }
 
 export const Navigation = () => {
+  const isUSA = useUserLocation()
+  
+  // Filter out featured-work tab for USA users
+  const visibleTabs = navigationTabs.filter((tab) => {
+    if (tab.id === 'featured-work' && isUSA === true) {
+      return false
+    }
+    return true
+  })
+
   return (
     <nav className="mt-6">
       <div className="
@@ -20,7 +31,7 @@ export const Navigation = () => {
         border border-white/20 dark:border-white/10
         shadow-lg shadow-blue-500/10 dark:shadow-blue-400/10
       ">
-        {navigationTabs.map((tab) => (
+        {visibleTabs.map((tab) => (
           <NavLink
             key={tab.id}
             to={tab.path}

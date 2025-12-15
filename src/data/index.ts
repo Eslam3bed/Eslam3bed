@@ -261,47 +261,62 @@ export const volunteerExperience: VolunteerExperience[] = [
 export const selectedProjects: Project[] = [
   {
     id: "sp1",
-    name: "Treasure Hunt",
-    role: "Lead Developer",
+    name: "QuiQ",
+    role: "Lead Full-Stack Engineer",
     description:
-      "Interactive web application with real-time multiplayer functionality and complex game mechanics",
-    technologies: ["React", "Socket.io", "Node.js", "MongoDB"],
-    date: "2023",
+      "Internal platform focused on manual review, auditing, and quality control of SAT questions",
+    technologies: ["React", "Node.js", "TypeScript", "PostgreSQL", "MongoDB"],
+    date: "Jan 2025 – Aug 2025",
+    link: "https://quiq.netlify.app/",
     details:
-      "Real-time multiplayer game supporting 1000+ concurrent users with WebSocket architecture",
+      "Led engineering efforts to improve review workflows, fix data inconsistencies, and support content migration into the Puef platform. Responsibilities included system refactoring, workflow tooling, and migration support.",
   },
   {
     id: "sp2",
-    name: "Quick",
-    role: "Full-Stack Developer",
+    name: "Puef.ai",
+    role: "Lead Full-Stack Engineer",
     description:
-      "High-performance web application focused on speed and user experience optimization",
-    technologies: ["Next.js", "TypeScript", "PostgreSQL"],
-    date: "2022",
+      "AI-driven SAT learning platform that automates planning, review scheduling, and learning optimization based on user performance",
+    technologies: ["React", "Node.js", "TypeScript", "AI/ML", "PostgreSQL"],
+    date: "Jan 2025 – Aug 2025",
+    link: "https://puef.ai",
     details:
-      "Lightning-fast application with 95+ Lighthouse score and sub-second load times",
+      "Worked on system architecture, AI-assisted workflows, and scalable full-stack implementation with a strong focus on reliability and extensibility.",
   },
   {
     id: "sp3",
-    name: "Manar",
-    role: "Technical Lead",
+    name: "Zaki.net",
+    role: "DevOps Engineer / Architecture Contributor",
     description:
-      "Educational platform with advanced content management and user engagement features",
-    technologies: ["React", "Express.js", "MongoDB", "AWS"],
-    date: "2021",
+      "Web3-based platform built on the Ethereum blockchain for launching and managing decentralized campaigns",
+    technologies: ["Ethereum", "Web3", "Docker", "CI/CD", "Blockchain"],
+    date: "Feb 2024 – Jun 2024",
+    link: "https://zaki.net",
     details:
-      "Educational platform serving 10K+ students with interactive learning modules",
+      "Contributed primarily to DevOps infrastructure and assisted with system architecture design, including deployment pipelines, environment setup, and blockchain-related infrastructure considerations.",
   },
   {
     id: "sp4",
-    name: "Zaki",
-    role: "Senior Developer",
+    name: "Imtiaz Farm",
+    role: "Front-End Engineer",
     description:
-      "E-commerce solution with integrated payment systems and inventory management",
-    technologies: ["React", "Node.js", "Stripe", "Redis"],
-    date: "2020",
+      "High-volume campaign management platform for marketing teams, designed to handle hundreds of thousands of notifications across multiple channels",
+    technologies: ["React", "TypeScript", "Next.js", "Node.js"],
+    date: "Jan 2024 – Jul 2024",
     details:
-      "Complete e-commerce solution processing $100K+ monthly transactions",
+      "Focused on building and optimizing the front-end experience, dashboards, and workflows for high-scale campaign creation and monitoring.",
+  },
+  {
+    id: "sp5",
+    name: "Treasure Hunt (Antiqlens)",
+    role: "Lead Developer",
+    description:
+      "Real-time multiplayer web game designed to support 1,000+ concurrent users using a scalable WebSocket-based architecture",
+    technologies: ["React", "Socket.io", "Node.js", "MongoDB", "WebSocket"],
+    date: "Sep 2023 – Jan 2024",
+    link: "https://antiqlens.netlify.app",
+    details:
+      "Led system design, real-time communication, and performance optimization for a multiplayer game supporting over 1,000 concurrent users.",
   },
 ];
 
@@ -411,12 +426,12 @@ export const calculateExperience = (): number => {
 export const navigationTabs = [
   { id: "about", label: "About Me", icon: "User", path: "/" },
   { id: "journey", label: "Journey", icon: "Briefcase", path: "/journey" },
-  // {
-  //   id: "featured-work",
-  //   label: "Featured Work",
-  //   icon: "FolderOpen",
-  //   path: "/featured-work",
-  // },
+  {
+    id: "featured-work",
+    label: "Featured Work",
+    icon: "FolderOpen",
+    path: "/featured-work",
+  },
   {
     id: "what-i-can-do",
     label: "What I Can Do",
