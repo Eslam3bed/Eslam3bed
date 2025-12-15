@@ -16,7 +16,7 @@ function App() {
           <Route
             path="featured-work"
             element={
-              <ProtectedRoute blockUSA={true} redirectTo="/">
+              <ProtectedRoute blockUSA redirectTo="/">
                 <FeaturedWorkPage />
               </ProtectedRoute>
             }
