@@ -14,7 +14,7 @@ export const ResumeModal = ({ isOpen, onClose, pdfUrl }: ResumeModalProps) => {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = pdfUrl;
-    link.download = "eslam-abed-resume.pdf";
+    link.download = "eslam-a-hugair-resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

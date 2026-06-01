@@ -1,14 +1,18 @@
 import { useState } from "react";
-import { User, Zap, Layers, Mail, FileText } from "lucide-react";
+import { User, Zap, Layers, Mail, FileText, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { PageTransition, ResumeModal } from "@/components/common";
 import { calculateExperience } from "@/data";
 import resumePdf from "@/assets/files/eslam.dev.cv.pdf";
+import resumeMlopsPdf from "@/assets/files/eslam.dev.cv.mlops.pdf";
+
+type ResumeVariant = "primary" | "mlops";
 
 export const AboutPage = () => {
   const yearsOfExperience = calculateExperience();
-  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
+  const [resumeVariant, setResumeVariant] = useState<ResumeVariant | null>(null);
+  const resumeUrl = resumeVariant === "mlops" ? resumeMlopsPdf : resumePdf;
 
   return (
     <PageTransition>
@@ -17,12 +21,12 @@ export const AboutPage = () => {
           <h2 className="text-4xl md:text-5xl font-bold">
             <span
               className="
-              bg-gradient-to-r from-foreground via-blue-600 to-foreground 
-              dark:from-foreground-dark dark:via-blue-400 dark:to-foreground-dark 
+              bg-gradient-to-r from-foreground via-blue-600 to-foreground
+              dark:from-foreground-dark dark:via-blue-400 dark:to-foreground-dark
               bg-clip-text text-transparent
             "
             >
-              Hi, I'm Eslam Abed
+              Hi, I'm Eslam A. Hugair
             </span>
             <span className="wave inline-block ml-2">👋</span>
           </h2>
@@ -64,19 +68,20 @@ export const AboutPage = () => {
           <CardContent className="p-8 space-y-6 relative z-10">
             <div className="text-lg text-muted-foreground dark:text-muted-dark-foreground leading-relaxed space-y-4">
               <p>
-                A passionate and accomplished{" "}
+                A{" "}
                 <span className="text-blue-600 dark:text-blue-400 font-semibold">
-                  Full-Stack Web Developer
+                  Full-Stack &amp; AI Engineer
                 </span>{" "}
-                with a proven track record of delivering scalable, data-driven,
-                and high-impact solutions.
+                who ships AI-native products end-to-end — from data
+                pipelines and LLM orchestration to the interfaces and
+                infrastructure around them.
               </p>
 
               <div
                 className="
-                bg-gradient-to-r from-white/60 to-blue-50/60 
-                dark:from-white/10 dark:to-blue-950/30 
-                p-6 rounded-2xl 
+                bg-gradient-to-r from-white/60 to-blue-50/60
+                dark:from-white/10 dark:to-blue-950/30
+                p-6 rounded-2xl
                 border border-white/30 dark:border-white/10
                 backdrop-blur-md
                 hover:bg-blue-50/30 dark:hover:bg-blue-950/40
@@ -88,20 +93,21 @@ export const AboutPage = () => {
                   About Me
                 </h3>
                 <p>
-                  I specialize in creating and maintaining robust, end-to-end
-                  applications and mobile-friendly websites, with a strong focus
-                  on delivering rich user experiences. Throughout my career,
-                  I've collaborated with cross-functional teams to tackle
-                  complex challenges and provide innovative solutions, ensuring
-                  successful project delivery.
+                  I build platforms that put LLMs to work in production —
+                  multi-provider gateways (OpenAI, Anthropic, Gemini), queue-driven
+                  orchestration (BullMQ), embedding + vector search (Qdrant,
+                  Pinecone), and the ingestion / evaluation pipelines that feed
+                  them. I own the work end-to-end: backend services in
+                  Node/TypeScript and Python, frontends in React/Next, and the
+                  DevOps to ship and operate them on AWS, GCP, and Cloud Run.
                 </p>
               </div>
 
               <div
                 className="
-                bg-gradient-to-r from-blue-50/60 to-white/60 
-                dark:from-blue-950/30 dark:to-white/10 
-                p-6 rounded-2xl 
+                bg-gradient-to-r from-blue-50/60 to-white/60
+                dark:from-blue-950/30 dark:to-white/10
+                p-6 rounded-2xl
                 border border-white/30 dark:border-white/10
                 backdrop-blur-md
                 hover:bg-blue-50/30 dark:hover:bg-blue-950/40
@@ -110,12 +116,14 @@ export const AboutPage = () => {
               >
                 <h3 className="font-semibold text-foreground dark:text-foreground-dark mb-3 flex items-center">
                   <Layers className="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400" />
-                  Expertise
+                  How I work
                 </h3>
                 <p>
-                  My expertise spans front-end development, big data solutions,
-                  and DevOps integration, with a proven track record of leading
-                  teams, mentoring developers, and driving product growth.
+                  10+ years across startups and product teams: data-ingestion
+                  services, internal tooling and dashboards, real-time systems,
+                  and the LLM-orchestrated pipelines I build today. I take
+                  problems from rough idea to production, and I keep the
+                  pipelines, infra and frontends pointing in the same direction.
                 </p>
               </div>
             </div>
@@ -144,9 +152,9 @@ export const AboutPage = () => {
               </Button>
               <Button
                 variant="outline"
-                onClick={() => setIsResumeModalOpen(true)}
+                onClick={() => setResumeVariant("primary")}
                 className="
-                  border-blue-200 dark:border-blue-800 
+                  border-blue-200 dark:border-blue-800
                   hover:bg-blue-50 dark:hover:bg-blue-950/50
                   backdrop-blur-sm
                   hover:border-blue-300 dark:hover:border-blue-700
@@ -157,15 +165,29 @@ export const AboutPage = () => {
                 <FileText className="mr-2 h-4 w-4" />
                 View Resume
               </Button>
+              <Button
+                variant="ghost"
+                onClick={() => setResumeVariant("mlops")}
+                className="
+                  text-blue-700 dark:text-blue-300
+                  hover:bg-blue-50 dark:hover:bg-blue-950/50
+                  backdrop-blur-sm
+                  transition-all duration-300
+                  hover:scale-105
+                "
+              >
+                <Database className="mr-2 h-4 w-4" />
+                MLOps Variant
+              </Button>
             </div>
           </CardContent>
         </Card>
       </div>
 
       <ResumeModal
-        isOpen={isResumeModalOpen}
-        onClose={() => setIsResumeModalOpen(false)}
-        pdfUrl={resumePdf}
+        isOpen={resumeVariant !== null}
+        onClose={() => setResumeVariant(null)}
+        pdfUrl={resumeUrl}
       />
     </PageTransition>
   );

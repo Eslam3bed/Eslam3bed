@@ -34,10 +34,10 @@ export const Header = ({ onToggleTheme }: HeaderProps) => {
         </div>
         <div>
           <h1 className="text-xl font-bold bg-gradient-to-r from-foreground to-muted-foreground dark:from-foreground-dark dark:to-muted-dark-foreground bg-clip-text text-transparent">
-            Eslam Abed
+            Eslam A. Hugair
           </h1>
           <p className="text-sm text-muted-foreground dark:text-muted-dark-foreground">
-            Full-Stack Developer
+            Full-Stack &amp; AI Engineer
           </p>
         </div>
       </div>

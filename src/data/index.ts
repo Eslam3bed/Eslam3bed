@@ -1,3 +1,8 @@
+import quiqScreenshot from "@/assets/screenshots/quiq.png";
+import puefScreenshot from "@/assets/screenshots/puef.png";
+import govalidateScreenshot from "@/assets/screenshots/govalidate.png";
+import antiqlensScreenshot from "@/assets/screenshots/antiqlens.png";
+
 // Types
 export interface Project {
   id: string;
@@ -8,6 +13,7 @@ export interface Project {
   link?: string;
   date?: string;
   details?: string;
+  screenshot?: string;
 }
 
 export interface WorkExperience {
@@ -44,10 +50,10 @@ export interface VolunteerExperience {
 export const workExperience: WorkExperience[] = [
   {
     id: "0",
-    role: "Sr. Front End Engineer & DevOps",
+    role: "Sr. Front End Engineer & DevOps (Part-Time)",
     company: "Mannar.sa",
     companyLink: "https://mannar.sa/",
-    period: "Sep 2025 - Present",
+    period: "Sep 2025 - Present · Part-Time",
     location: "KSA (Remote)",
     highlights: [
       "Saudi Arabia's first online legal consultation platform, delivering digital access to legal services with a secure, scalable architecture",
@@ -71,15 +77,16 @@ export const workExperience: WorkExperience[] = [
     period: "Dec 2022 - Sep 2025",
     location: "USA (Remote)",
     highlights: [
-      "Data-driven company using AI and data analysis to provide key insights about company departments",
-      "Built Slack bot interface to assess client's use cases and deliver high-end front-end solutions",
-      "Worked with ML team to provide high-integrity results and built debugging tools for data integrity",
-      "Developed various functionalities using Azure functions and worked with Cognito search and Elasticsearch for big data solutions",
-      "Built data ingestion services to stream data from various integration tools",
-      "Promoted to team lead after 6 months due to adaptability and performance in the fast-growing team",
+      "Data-driven AI analytics platform surfacing insights about company departments from heterogeneous integrations",
+      "Built data ingestion services that stream from a variety of integration tools into Elasticsearch and CosmosDB, with Cognito Search for big-data retrieval",
+      "Designed and shipped debugging tools that helped the team identify and resolve data-integrity issues across the pipeline",
+      "Partnered with the ML team to surface high-integrity model outputs and feedback loops into the product",
+      "Authored Azure Functions services that handled ingestion, enrichment, and downstream notifications at scale",
+      "Built the Slack bot that served as the primary interface for clients to explore use cases and act on insights",
+      "Promoted to team lead within 6 months for adaptability and ownership in a fast-growing team",
     ],
     technologies:
-      "TypeScript, Node.js, React.js, Azure Cloud Services, CosmosDB, MongoDB, Elasticsearch, Cognito Search",
+      "TypeScript, Python, Node.js, React.js, Azure Functions, CosmosDB, MongoDB, Elasticsearch, Cognito Search, Slack APIs",
     projects: [
       {
         id: "p1",
@@ -238,179 +245,266 @@ export const workExperience: WorkExperience[] = [
 ];
 
 // Volunteer Experience Data
-export const volunteerExperience: VolunteerExperience[] = [
-  {
-    id: "v1",
-    role: "Quality Assurance & Mentor",
-    organization: "Gaza Sky Geeks / Mercy Corps",
-    organizationLink: "https://gazaskygeeks.com/",
-    period: "Jun 2018 - Oct 2018",
-    location: "Gaza, Palestine",
-    description:
-      "A program of Mercy Corps, a leading global humanitarian agency working on some of the world's toughest challenges.",
-    achievements: [
-      "Mentored new graduates for the GSG code academy",
-      "Conducted quality assurance and code reviews for newly trained developers",
-      "Helped onboard junior developers into the tech ecosystem",
-      "Provided guidance on best practices and industry standards",
-    ],
-  },
-];
+export const volunteerExperience: VolunteerExperience[] = [];
 
 // Selected Projects Data
 export const selectedProjects: Project[] = [
   {
-    id: "sp1",
+    id: "sp-govalidate",
+    name: "GoValidate",
+    role: "Solo Builder · Full-Stack + LLM Orchestration",
+    description:
+      "AI-native startup validation platform that turns a rough idea into an evidence-backed verdict on demand, competition, risk, and next steps",
+    technologies: [
+      "Next.js 15",
+      "NestJS",
+      "TypeScript",
+      "BullMQ",
+      "MongoDB",
+      "Qdrant",
+      "OpenAI",
+      "Anthropic",
+      "LangChain",
+      "Docker",
+    ],
+    date: "2025 – Present",
+    link: "https://govalidate.dev",
+    screenshot: govalidateScreenshot,
+    details:
+      "Designed and shipped the platform end-to-end: BullMQ-orchestrated multi-agent pipeline that mines Reddit signals, generates and scores ideas with multi-provider LLMs (OpenAI + Anthropic via LangChain), persists per-job artifacts, and runs hybrid vector + keyword search over Qdrant embeddings. Owns infra (Docker Compose, Caddy), source-credibility scoring, and the Next.js admin/console.",
+  },
+  {
+    id: "sp-video-knowledge-engine",
+    name: "Video Knowledge Engine",
+    role: "Solo Builder · Data Pipelines + AI",
+    description:
+      "9-stage video ingestion pipeline that transcribes, summarizes, embeds and clusters video into a searchable, clip-level knowledge graph",
+    technologies: [
+      "NestJS",
+      "BullMQ",
+      "MongoDB",
+      "Redis",
+      "Deepgram",
+      "Google STT",
+      "Gemini",
+      "OpenAI",
+      "UMAP",
+      "GCS",
+      "Cloud Run",
+    ],
+    date: "2026",
+    details:
+      "BullMQ pipeline: FFmpeg audio extraction → chunking → parallel Deepgram/Google STT → assembly → Gemini/GPT-4o summarization → topic + section extraction → sliding-window embeddings → knowledge-graph build → UMAP + agglomerative dendrogram for hierarchical retrieval. Swappable providers across STT, LLM and embeddings; SSE progress streaming and per-user graphs. Deployed to Google Cloud Run.",
+  },
+  {
+    id: "sp-quiq",
     name: "QuiQ",
-    role: "Lead Full-Stack Engineer",
+    role: "Lead Full-Stack Engineer · DevOps",
     description:
-      "Internal platform focused on manual review, auditing, and quality control of SAT questions",
-    technologies: ["React", "Node.js", "TypeScript", "PostgreSQL", "MongoDB"],
-    date: "Jan 2025 – Aug 2025",
+      "Internal review, auditing and quality-control platform for SAT content — feedback, activity tracking, role management and migration tooling",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Auth0",
+      "Zod",
+      "Netlify",
+    ],
+    date: "Jan 2025 – Present",
     link: "https://quiq.netlify.app/",
+    screenshot: quiqScreenshot,
     details:
-      "Led engineering efforts to improve review workflows, fix data inconsistencies, and support content migration into the Puef platform. Responsibilities included system refactoring, workflow tooling, and migration support.",
+      "Owned QuiQ end-to-end: migrated the backend from Netlify Functions to a long-lived Express API for predictable load distribution, built feedback + activity-tracking, role-based access control (super-admin/admin/user), an invitation flow, and the migration tooling that fed content into Puef. Handled the DevOps side (CI, environments, monitoring) and led the engineering work across the staging and production environments.",
   },
   {
-    id: "sp2",
+    id: "sp-puef",
     name: "Puef.ai",
-    role: "Lead Full-Stack Engineer",
+    role: "Contributor · LLM Endpoints + Frontend",
     description:
-      "AI-driven SAT learning platform that automates planning, review scheduling, and learning optimization based on user performance",
-    technologies: ["React", "Node.js", "TypeScript", "AI/ML", "PostgreSQL"],
-    date: "Jan 2025 – Aug 2025",
+      "AI-driven SAT learning platform that adapts planning, review scheduling and content to each learner",
+    technologies: [
+      "Python",
+      "Flask",
+      "LangChain",
+      "OpenAI",
+      "Anthropic",
+      "Gemini",
+      "Deepseek",
+      "MongoDB",
+      "React",
+      "TypeScript",
+    ],
+    date: "Jan 2025 – Present",
     link: "https://puef.ai",
+    screenshot: puefScreenshot,
     details:
-      "Worked on system architecture, AI-assisted workflows, and scalable full-stack implementation with a strong focus on reliability and extensibility.",
+      "Recent work focused on hardening the LLM endpoints — generation endpoints and the 'fixer' flows that detect and repair invalid or unclear model outputs. Contributed across the multi-provider LangChain layer (OpenAI / Anthropic / Gemini / Deepseek) and the React frontend, plus integration with the QuiQ review pipeline.",
   },
   {
-    id: "sp3",
-    name: "Zaki.net",
-    role: "DevOps Engineer / Architecture Contributor",
+    id: "sp-story-teller",
+    name: "Story-Teller",
+    role: "Solo Builder · LLM Orchestration",
     description:
-      "Web3-based platform built on the Ethereum blockchain for launching and managing decentralized campaigns",
-    technologies: ["Ethereum", "Web3", "Docker", "CI/CD", "Blockchain"],
-    date: "Feb 2024 – Jun 2024",
-    link: "https://zaki.net",
+      "Turns a written story into a narrated video — scene breakdown, image generation, voice and music — through a single multi-agent flow",
+    technologies: [
+      "Node.js",
+      "Express",
+      "React",
+      "Vite",
+      "TypeScript",
+      "OpenAI",
+      "DALL-E 3",
+      "ElevenLabs",
+      "MongoDB",
+      "Docker",
+    ],
+    date: "2025",
     details:
-      "Contributed primarily to DevOps infrastructure and assisted with system architecture design, including deployment pipelines, environment setup, and blockchain-related infrastructure considerations.",
+      "Orchestrates GPT-4o for refinement and scene breakdown, DALL-E 3 for per-scene imagery, and ElevenLabs for narration, composing the assets into a final video. Containerized end-to-end with a TypeScript frontend and an Express + MongoDB backend.",
   },
   {
-    id: "sp4",
-    name: "Imtiaz Farm",
-    role: "Front-End Engineer",
+    id: "sp-shorts-gen",
+    name: "Shorts-Gen",
+    role: "Solo Builder · Video AI",
     description:
-      "High-volume campaign management platform for marketing teams, designed to handle hundreds of thousands of notifications across multiple channels",
-    technologies: ["React", "TypeScript", "Next.js", "Node.js"],
-    date: "Jan 2024 – Jul 2024",
+      "AI-assisted pipeline that turns long-form video into stylized 30-second shorts for social channels",
+    technologies: ["Python", "FFmpeg", "OpenAI", "Style Transfer", "CLI"],
+    date: "2025",
     details:
-      "Focused on building and optimizing the front-end experience, dashboards, and workflows for high-scale campaign creation and monitoring.",
+      "ChatGPT identifies the most interesting segments, FFmpeg clips and re-encodes them, and a style-transfer pass applies a chosen cartoon look. CLI-first, GPU-aware, optimized for TikTok/Reels/Shorts aspect ratios.",
   },
   {
-    id: "sp5",
+    id: "sp-denture",
+    name: "Denture Mesh + Content Engine",
+    role: "Contributor · Mesh Processing + LLM",
+    description:
+      "Toolkit for dental mesh capture, annotation and AI-generated educational content for practitioners and patients",
+    technologies: ["Python", "Open3D", "NumPy", "OpenAI", "LangChain"],
+    date: "2025",
+    details:
+      "Mesh annotation pipeline over depth-camera captures (Open3D / NumPy), plus an LLM-backed content generation layer. Collaborated with a small team on the mesh tooling while owning the AI content side.",
+  },
+  {
+    id: "sp-antiqlens",
     name: "Treasure Hunt (Antiqlens)",
     role: "Lead Developer",
     description:
-      "Real-time multiplayer web game designed to support 1,000+ concurrent users using a scalable WebSocket-based architecture",
+      "Real-time multiplayer web game designed for 1,000+ concurrent users on a scalable WebSocket architecture",
     technologies: ["React", "Socket.io", "Node.js", "MongoDB", "WebSocket"],
     date: "Sep 2023 – Jan 2024",
     link: "https://antiqlens.netlify.app",
+    screenshot: antiqlensScreenshot,
     details:
-      "Led system design, real-time communication, and performance optimization for a multiplayer game supporting over 1,000 concurrent users.",
+      "Led system design, real-time communication and performance optimization for a multiplayer game supporting 1,000+ concurrent users.",
+  },
+  {
+    id: "sp-imtiaz",
+    name: "Imtiaz Farm",
+    role: "Front-End Engineer",
+    description:
+      "High-volume campaign management platform handling hundreds of thousands of notifications across multiple channels",
+    technologies: ["React", "TypeScript", "Next.js", "Node.js"],
+    date: "Jan 2024 – Jul 2024",
+    details:
+      "Built and optimized dashboards and workflows for high-scale campaign creation and monitoring.",
   },
 ];
 
 // Skills Categories Data - Updated to match your existing website technologies
 export const skillCategories: SkillCategory[] = [
   {
-    category: "Frontend Development",
+    category: "AI / LLM Orchestration",
+    icon: "Sparkles",
+    description: "Building AI-native products end-to-end",
+    skills: [
+      "Multi-provider LLM (OpenAI, Anthropic, Gemini, Deepseek)",
+      "LangChain",
+      "Prompt engineering",
+      "Retrieval-augmented generation (RAG)",
+      "Vector search (Qdrant, Pinecone)",
+      "Embeddings",
+      "Agentic / multi-step pipelines",
+      "BullMQ job orchestration",
+      "Speech-to-text (Deepgram, Google STT)",
+      "Image + voice generation (DALL-E, ElevenLabs)",
+    ],
+  },
+  {
+    category: "Data & Backend",
+    icon: "Database",
+    description: "Ingestion pipelines, services and APIs",
+    skills: [
+      "Python",
+      "Node.js",
+      "TypeScript",
+      "NestJS",
+      "Express.js",
+      "Flask",
+      "REST APIs",
+      "GraphQL",
+      "Socket.io",
+      "Microservices",
+      "Data ingestion",
+      "Elasticsearch",
+      "Kafka",
+      "MongoDB",
+      "PostgreSQL",
+      "Redis",
+      "CosmosDB",
+    ],
+  },
+  {
+    category: "Frontend",
     icon: "Code",
-    description: "Creating stunning user interfaces and experiences",
+    description: "Interfaces for technical products",
     skills: [
       "React",
       "Next.js",
       "TypeScript",
-      "JavaScript (ES6+)",
       "Tailwind CSS",
       "Redux",
       "Remix.js",
-      "HTML5",
-      "CSS3",
-      "SASS",
-      "Responsive Design",
-      "SEO Optimization",
+      "Vite",
+      "shadcn/ui",
+      "Responsive design",
+      "SEO optimization",
     ],
   },
   {
-    category: "Backend & APIs",
-    icon: "Database",
-    description: "Building robust server-side solutions",
-    skills: [
-      "Node.js",
-      "Express.js",
-      "TypeScript",
-      "REST APIs",
-      "GraphQL",
-      "JWT",
-      "Socket.io",
-      "Microservices",
-      "API Design",
-      "Notification Systems",
-      "Firebase",
-    ],
-  },
-  {
-    category: "Databases & Big Data",
-    icon: "Database",
-    description: "Data storage and processing solutions",
-    skills: [
-      "MongoDB",
-      "PostgreSQL",
-      "MySQL",
-      "Redis",
-      "CosmosDB",
-      "Supabase",
-      "Firebase",
-      "Elasticsearch",
-      "Kafka",
-      "Data Ingestion",
-      "Big Data Processing",
-    ],
-  },
-  {
-    category: "Cloud & DevOps",
+    category: "Cloud, DevOps & Infra",
     icon: "Cloud",
-    description: "Scalable infrastructure and deployment",
+    description: "Shipping and operating production systems",
     skills: [
       "AWS",
       "Azure",
-      "Google Cloud",
+      "Google Cloud (Cloud Run, GCS)",
       "Docker",
-      "CI/CD Pipelines",
+      "Docker Compose",
+      "CI/CD pipelines",
       "GitHub Actions",
       "Jenkins",
-      "Infrastructure Management",
-      "Platform Scaling",
-      "Monitoring & Logging",
-      "Security & Compliance",
-      "Vercel",
+      "Railway",
       "Netlify",
+      "Vercel",
+      "Monitoring & logging",
+      "Security & compliance",
+      "Caddy",
     ],
   },
   {
-    category: "Tools & Testing",
+    category: "Tooling & Practices",
     icon: "Wrench",
-    description: "Development tools and quality assurance",
+    description: "How the work gets shipped",
     skills: [
       "Git",
-      "VS Code",
-      "Jest",
-      "Unit Testing",
-      "Integration Testing",
-      "Code Reviews",
+      "Jest / Pytest",
+      "Code reviews",
+      "Unit + integration testing",
+      "Internal tooling & dashboards",
       "Figma",
-      "Adobe XD",
-      "InVision",
+      "Technical mentoring",
     ],
   },
 ];

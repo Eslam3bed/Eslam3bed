@@ -35,6 +35,15 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
         " />
 
         <div className="p-6 space-y-6 relative z-10">
+          {project.screenshot && (
+            <div className="relative -mx-6 -mt-6 aspect-[16/10] overflow-hidden border-b border-white/20 dark:border-white/10 bg-muted dark:bg-muted-dark">
+              <img
+                src={project.screenshot}
+                alt={`${project.name} preview`}
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
+          )}
           <div className="flex items-start justify-between">
             <div>
               <h3 className="text-2xl font-bold text-foreground dark:text-foreground-dark">{project.name}</h3>

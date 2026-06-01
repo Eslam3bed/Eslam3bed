@@ -19,9 +19,20 @@ export const FeaturedWorkPage = () => {
         {selectedProjects.map((project) => (
           <Card
             key={project.id}
-            className="border-border dark:border-border-dark hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary-dark/5 transition-all duration-300 cursor-pointer group bg-card dark:bg-card-dark"
+            className="border-border dark:border-border-dark hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary-dark/5 transition-all duration-300 cursor-pointer group bg-card dark:bg-card-dark overflow-hidden flex flex-col"
             onClick={() => setSelectedProject(project)}
           >
+            {project.screenshot && (
+              <div className="relative aspect-[16/10] overflow-hidden bg-muted dark:bg-muted-dark border-b border-border dark:border-border-dark">
+                <img
+                  src={project.screenshot}
+                  alt={`${project.name} preview`}
+                  loading="lazy"
+                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/10 to-transparent dark:from-black/30" />
+              </div>
+            )}
             <CardHeader>
               <div className="flex items-start justify-between">
                 <div className="space-y-2">
@@ -48,9 +59,9 @@ export const FeaturedWorkPage = () => {
                 </div>
               </div>
             </CardHeader>
-            <CardContent>
+            <CardContent className="flex-1 flex flex-col">
               <p className="text-muted-foreground dark:text-muted-dark-foreground mb-4">{project.description}</p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 mt-auto">
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
