@@ -204,10 +204,10 @@ GOVALIDATE = ProjectEntry(
 )
 
 VIDEO_KE = ProjectEntry(
-    name="Video Knowledge Engine",
+    name="VEngine",
     role="Solo builder · Data pipelines + AI",
     period="2026",
-    one_liner="9-stage video-ingestion pipeline that transcribes, summarizes, embeds and clusters video into a searchable, clip-level knowledge graph.",
+    one_liner="Video knowledge engine — a 4-phase pipeline (ingestion, processing, dendrogram, search index) that transcribes, summarizes, embeds and clusters video into a searchable, clip-level knowledge graph.",
     bullets=[
         "BullMQ pipeline: FFmpeg audio extraction → 5-min chunking → parallel Deepgram / Google STT → assembly → Gemini / GPT-4o summarization → topic + section extraction → 30s sliding-window embeddings → knowledge-graph build → UMAP + agglomerative dendrogram for hierarchical retrieval.",
         "Swappable providers across STT (Deepgram / Google), LLM (Gemini / OpenAI) and embeddings (Gemini 768d / OpenAI 1536d); A/B comparison built in.",

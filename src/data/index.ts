@@ -2,6 +2,7 @@ import quiqScreenshot from "@/assets/screenshots/quiq.png";
 import puefScreenshot from "@/assets/screenshots/puef.png";
 import govalidateScreenshot from "@/assets/screenshots/govalidate.png";
 import antiqlensScreenshot from "@/assets/screenshots/antiqlens.png";
+import vengineScreenshot from "@/assets/screenshots/vengine.png";
 
 // Types
 export interface Project {
@@ -274,11 +275,11 @@ export const selectedProjects: Project[] = [
       "Designed and shipped the platform end-to-end: BullMQ-orchestrated multi-agent pipeline that mines Reddit signals, generates and scores ideas with multi-provider LLMs (OpenAI + Anthropic via LangChain), persists per-job artifacts, and runs hybrid vector + keyword search over Qdrant embeddings. Owns infra (Docker Compose, Caddy), source-credibility scoring, and the Next.js admin/console.",
   },
   {
-    id: "sp-video-knowledge-engine",
-    name: "Video Knowledge Engine",
+    id: "sp-vengine",
+    name: "VEngine",
     role: "Solo Builder · Data Pipelines + AI",
     description:
-      "9-stage video ingestion pipeline that transcribes, summarizes, embeds and clusters video into a searchable, clip-level knowledge graph",
+      "Video knowledge engine — a 4-phase pipeline (ingestion, processing, dendrogram, search index) that transcribes, summarizes, embeds and clusters video into a searchable, clip-level knowledge graph",
     technologies: [
       "NestJS",
       "BullMQ",
@@ -293,6 +294,7 @@ export const selectedProjects: Project[] = [
       "Cloud Run",
     ],
     date: "2026",
+    screenshot: vengineScreenshot,
     details:
       "BullMQ pipeline: FFmpeg audio extraction → chunking → parallel Deepgram/Google STT → assembly → Gemini/GPT-4o summarization → topic + section extraction → sliding-window embeddings → knowledge-graph build → UMAP + agglomerative dendrogram for hierarchical retrieval. Swappable providers across STT, LLM and embeddings; SSE progress streaming and per-user graphs. Deployed to Google Cloud Run.",
   },
