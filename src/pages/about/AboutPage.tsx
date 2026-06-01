@@ -1,18 +1,14 @@
 import { useState } from "react";
-import { User, Zap, Layers, Mail, FileText, Database } from "lucide-react";
+import { User, Zap, Layers, Mail, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { PageTransition, ResumeModal } from "@/components/common";
 import { calculateExperience } from "@/data";
 import resumePdf from "@/assets/files/eslam.dev.cv.pdf";
-import resumeMlopsPdf from "@/assets/files/eslam.dev.cv.mlops.pdf";
-
-type ResumeVariant = "primary" | "mlops";
 
 export const AboutPage = () => {
   const yearsOfExperience = calculateExperience();
-  const [resumeVariant, setResumeVariant] = useState<ResumeVariant | null>(null);
-  const resumeUrl = resumeVariant === "mlops" ? resumeMlopsPdf : resumePdf;
+  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
   return (
     <PageTransition>
@@ -152,7 +148,7 @@ export const AboutPage = () => {
               </Button>
               <Button
                 variant="outline"
-                onClick={() => setResumeVariant("primary")}
+                onClick={() => setIsResumeModalOpen(true)}
                 className="
                   border-blue-200 dark:border-blue-800
                   hover:bg-blue-50 dark:hover:bg-blue-950/50
@@ -165,29 +161,15 @@ export const AboutPage = () => {
                 <FileText className="mr-2 h-4 w-4" />
                 View Resume
               </Button>
-              <Button
-                variant="ghost"
-                onClick={() => setResumeVariant("mlops")}
-                className="
-                  text-blue-700 dark:text-blue-300
-                  hover:bg-blue-50 dark:hover:bg-blue-950/50
-                  backdrop-blur-sm
-                  transition-all duration-300
-                  hover:scale-105
-                "
-              >
-                <Database className="mr-2 h-4 w-4" />
-                MLOps Variant
-              </Button>
             </div>
           </CardContent>
         </Card>
       </div>
 
       <ResumeModal
-        isOpen={resumeVariant !== null}
-        onClose={() => setResumeVariant(null)}
-        pdfUrl={resumeUrl}
+        isOpen={isResumeModalOpen}
+        onClose={() => setIsResumeModalOpen(false)}
+        pdfUrl={resumePdf}
       />
     </PageTransition>
   );

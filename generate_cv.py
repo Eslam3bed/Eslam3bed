@@ -190,14 +190,13 @@ ZAINO_BULLETS = [
 
 GOVALIDATE = ProjectEntry(
     name="GoValidate",
-    role="Solo builder · Full-stack + LLM orchestration",
+    role="Solo · Full-stack + LLM orchestration",
     period="2025 – Present",
-    one_liner="AI-native startup-validation platform that turns a rough idea into an evidence-backed verdict on demand, competition, risk, and the next move.",
+    one_liner="Solo-built AI-native validation platform — rough startup idea to evidence-backed verdict.",
     bullets=[
-        "Designed and shipped the platform end-to-end: NestJS API, Next.js 15 console, Caddy + Docker Compose infra.",
-        "BullMQ multi-agent pipeline that mines Reddit signals, generates and scores ideas with multi-provider LLMs (OpenAI + Anthropic via LangChain).",
-        "Hybrid vector + keyword search over Qdrant embeddings; source-credibility scoring (0–3) filters academic / government / press sources.",
-        "Per-job artifact stores, retry semantics and observability across stages of the pipeline.",
+        "Shipped end-to-end: NestJS API, Next.js 15 console, Docker Compose + Caddy infra.",
+        "BullMQ multi-agent pipeline mining Reddit signals through multi-provider LLMs (OpenAI + Anthropic via LangChain).",
+        "Hybrid vector + keyword search on Qdrant; 0–3 source-credibility scoring across academic, government and press.",
     ],
     tech="Next.js 15, NestJS, TypeScript, BullMQ, MongoDB, Qdrant, OpenAI, Anthropic, LangChain, Docker, Caddy.",
     link="https://govalidate.dev",
@@ -205,28 +204,28 @@ GOVALIDATE = ProjectEntry(
 
 VIDEO_KE = ProjectEntry(
     name="VEngine",
-    role="Solo builder · Data pipelines + AI",
+    role="Solo · Data pipelines + AI",
     period="2026",
-    one_liner="Video knowledge engine — a 4-phase pipeline (ingestion, processing, dendrogram, search index) that transcribes, summarizes, embeds and clusters video into a searchable, clip-level knowledge graph.",
+    one_liner="Solo-built video knowledge engine — turns video into a searchable, clip-level knowledge graph.",
     bullets=[
-        "BullMQ pipeline: FFmpeg audio extraction → 5-min chunking → parallel Deepgram / Google STT → assembly → Gemini / GPT-4o summarization → topic + section extraction → 30s sliding-window embeddings → knowledge-graph build → UMAP + agglomerative dendrogram for hierarchical retrieval.",
-        "Swappable providers across STT (Deepgram / Google), LLM (Gemini / OpenAI) and embeddings (Gemini 768d / OpenAI 1536d); A/B comparison built in.",
-        "Per-video and per-user knowledge graphs with cross-video deduplication and SSE progress streaming to the dashboard.",
-        "Containerized, deployed to Google Cloud Run; storage backed by local disk or GCS.",
+        "9-stage BullMQ pipeline: FFmpeg → chunking → parallel Deepgram / Google STT → Gemini / GPT-4o summarization → embeddings → knowledge-graph + dendrogram.",
+        "Swappable providers across STT, LLM and embeddings; A/B comparison built in.",
+        "Per-video and per-user graphs with cross-video deduplication and SSE progress streaming.",
+        "Deployed to Google Cloud Run; storage on local disk or GCS.",
     ],
     tech="NestJS, BullMQ, MongoDB, Redis, Deepgram, Google STT, Gemini, OpenAI, UMAP, GCS, Cloud Run, Turborepo.",
 )
 
 QUIQ = ProjectEntry(
     name="QuiQ",
-    role="Lead full-stack engineer · DevOps",
+    role="Lead engineer · DevOps",
     period="Jan 2025 – Present",
-    one_liner="Internal review, auditing and quality-control platform for SAT content, with feedback, activity tracking, role management and migration tooling.",
+    one_liner="Lead engineer on an internal SAT-content review platform — feedback, activity tracking, RBAC, migration tooling.",
     bullets=[
-        "Migrated the backend from Netlify Functions to a long-lived Express API to get predictable load distribution and lower cold-start latency.",
-        "Built feedback collection, activity / request tracking, role-based access control (super-admin / admin / user) and an invitation flow.",
-        "Owned the migration tooling that piped curated QuiQ content into the Puef learning platform.",
-        "Handled DevOps end-to-end: environments, CI, monitoring, and the staging / production split.",
+        "Migrated backend from Netlify Functions to a long-lived Express API for predictable load and lower latency.",
+        "Built feedback collection, activity / request tracking, RBAC (super-admin / admin / user) and the invitation flow.",
+        "Owned the migration tooling piping curated QuiQ content into Puef.",
+        "Owned DevOps end-to-end: environments, CI, monitoring, staging / production split.",
     ],
     tech="React, TypeScript, Node.js, Express, MongoDB, Auth0, Zod, Netlify.",
     link="https://quiq.netlify.app/",
@@ -236,11 +235,11 @@ PUEF = ProjectEntry(
     name="Puef.ai",
     role="Contributor · LLM endpoints + frontend",
     period="Jan 2025 – Present",
-    one_liner="AI-driven SAT learning platform that adapts planning, review scheduling and content to each learner.",
+    one_liner="AI SAT-learning platform — adaptive planning, review scheduling and content per learner.",
     bullets=[
-        "Hardened the LLM generation endpoints and the 'fixer' flows that detect and repair invalid or unclear model outputs.",
-        "Contributed across the multi-provider LangChain layer (OpenAI / Anthropic / Gemini / Deepseek).",
-        "Worked on the React frontend and the integration glue with the QuiQ review pipeline.",
+        "Hardened the LLM generation endpoints and built the 'fixer' flows that repair invalid or unclear outputs.",
+        "Worked across the multi-provider LangChain layer (OpenAI / Anthropic / Gemini / Deepseek).",
+        "Frontend work and the integration glue with the QuiQ review pipeline.",
     ],
     tech="Python, Flask, LangChain, OpenAI, Anthropic, Gemini, Deepseek, MongoDB, React, TypeScript, Railway.",
     link="https://puef.ai",
@@ -248,24 +247,24 @@ PUEF = ProjectEntry(
 
 STORY_TELLER = ProjectEntry(
     name="Story-Teller",
-    role="Solo builder · LLM orchestration",
+    role="Solo · LLM orchestration",
     period="2025",
-    one_liner="Turns a written story into a narrated video — scene breakdown, image generation, voice and music — through a single multi-agent flow.",
+    one_liner="Solo-built multi-agent flow that turns a written story into a narrated, illustrated video.",
     bullets=[
-        "Orchestrates GPT-4o for refinement and scene breakdown, DALL-E 3 for per-scene imagery, and ElevenLabs for narration.",
-        "Composes the assets into a final video; containerized end-to-end with a TypeScript frontend and Express + MongoDB backend.",
+        "Orchestrates GPT-4o (scenes), DALL-E 3 (imagery) and ElevenLabs (narration); composes the final video.",
+        "Containerized end-to-end — TypeScript frontend, Express + MongoDB backend.",
     ],
     tech="Node.js, Express, React, Vite, TypeScript, OpenAI, DALL-E 3, ElevenLabs, MongoDB, Docker.",
 )
 
 SHORTS_GEN = ProjectEntry(
     name="Shorts-Gen",
-    role="Solo builder · Video AI",
+    role="Solo · Video AI",
     period="2025",
-    one_liner="Pipeline that turns long-form video into stylized 30-second shorts for TikTok / Reels / Shorts.",
+    one_liner="Solo-built pipeline that turns long-form video into stylized 30-second shorts.",
     bullets=[
-        "ChatGPT identifies the most interesting segments; FFmpeg clips and re-encodes them; a style-transfer pass applies a chosen cartoon look.",
-        "CLI-first, GPU-aware, optimized for vertical aspect ratios.",
+        "ChatGPT picks the best segments; FFmpeg clips and re-encodes; style-transfer pass applies the chosen cartoon look.",
+        "CLI-first, GPU-aware, optimized for vertical formats.",
     ],
     tech="Python, FFmpeg, OpenAI, Style transfer, CLI.",
 )
@@ -274,10 +273,10 @@ DENTURE = ProjectEntry(
     name="Denture Mesh + Content Engine",
     role="Contributor · Mesh processing + LLM",
     period="2025",
-    one_liner="Toolkit for dental-mesh capture, annotation and AI-generated educational content for practitioners and patients.",
+    one_liner="Dental-mesh capture and annotation toolkit with an AI-generated educational-content layer.",
     bullets=[
-        "Mesh annotation pipeline over depth-camera captures using Open3D and NumPy.",
-        "LLM-backed content generation layer for practitioner-facing material; owned the AI side while collaborating on the mesh tooling.",
+        "Mesh annotation pipeline over depth-camera captures (Open3D, NumPy).",
+        "Owned the LLM-backed content-generation layer for practitioner-facing material.",
     ],
     tech="Python, Open3D, NumPy, OpenAI, LangChain.",
 )
@@ -304,12 +303,13 @@ PRIMARY = Variant(
         "TypeScript, leading teams, and operating production systems."
     ),
     skills=[
-        ("AI / LLM Orchestration: ", "Multi-provider LLM (OpenAI, Anthropic, Gemini, Deepseek) via LangChain; agentic / multi-step pipelines; BullMQ job orchestration; RAG; vector search (Qdrant, Pinecone); embeddings; Deepgram / Google STT; DALL-E, ElevenLabs."),
-        ("Languages & Frameworks: ", "TypeScript, Python, Node.js, NestJS, Express, Flask, React, Next.js, Redux, Remix, JWT, Socket.io, SASS."),
-        ("Data & Backend: ", "REST + GraphQL API design, microservices, ingestion pipelines, MongoDB, PostgreSQL, MySQL, CosmosDB, Redis, Elasticsearch, Kafka, Zod."),
-        ("Cloud, DevOps & Infra: ", "AWS, Azure, Google Cloud (Cloud Run, GCS), Docker, Docker Compose, CI/CD pipelines, GitHub Actions, Jenkins, Railway, Netlify, Vercel, Caddy, monitoring & logging."),
+        ("Frontend: ", "React, Next.js, TypeScript, JavaScript (ES6+), Tailwind CSS, shadcn/ui, Redux, Remix, Vite, SASS, responsive design, SEO optimization."),
+        ("Backend & APIs: ", "Node.js, Python, TypeScript, NestJS, Express, Flask, REST + GraphQL, microservices, Socket.io, JWT / OAuth, notification systems."),
+        ("Cloud, DevOps & Infra: ", "AWS, Azure, Google Cloud (Cloud Run, GCS), Docker, Docker Compose, CI/CD, GitHub Actions, Jenkins, Railway, Netlify, Vercel, Caddy, monitoring & logging."),
+        ("AI / LLM Orchestration: ", "Multi-provider LLM (OpenAI, Anthropic, Gemini, Deepseek) via LangChain; agentic / multi-step pipelines; BullMQ orchestration; RAG; vector search (Qdrant, Pinecone); embeddings; Deepgram / Google STT; DALL-E, ElevenLabs."),
+        ("Data Engineering: ", "Python (pandas, NumPy), data-ingestion pipelines, queue-based orchestration, Elasticsearch, Kafka, MongoDB, PostgreSQL, MySQL, CosmosDB, Redis, Qdrant, Cognito Search."),
         ("Security: ", "Auth0 / Clerk integrations, JWT / OAuth, RBAC, input validation & sanitization, CORS / CSP, secure data handling."),
-        ("Practices: ", "End-to-end ownership, internal tooling and dashboards, technical mentoring, code reviews, unit + integration testing, startup operating tempo."),
+        ("Practices: ", "End-to-end ownership, internal tooling and dashboards, technical mentoring, code reviews, unit + integration testing."),
     ],
     revic_bullets=REVIC_BULLETS_PRIMARY,
     projects_intro="A selection of work I have built solo or led.",

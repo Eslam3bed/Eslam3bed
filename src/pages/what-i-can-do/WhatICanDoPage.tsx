@@ -1,12 +1,14 @@
-import { Code, Database, Cloud, Wrench, Star } from 'lucide-react'
+import { Code, Database, Cloud, Wrench, Star, Sparkles, Server } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { skillCategories } from '@/data'
 
 const iconMap = {
   Code: <Code className="h-5 w-5" />,
+  Server: <Server className="h-5 w-5" />,
   Database: <Database className="h-5 w-5" />,
   Cloud: <Cloud className="h-5 w-5" />,
   Wrench: <Wrench className="h-5 w-5" />,
+  Sparkles: <Sparkles className="h-5 w-5" />,
 }
 
 export const WhatICanDoPage = () => {
