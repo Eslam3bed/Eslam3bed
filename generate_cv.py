@@ -190,9 +190,9 @@ ZAINO_BULLETS = [
 
 GOVALIDATE = ProjectEntry(
     name="GoValidate",
-    role="Solo · Full-stack + LLM orchestration",
+    role="Co-founder · Full-stack + LLM orchestration",
     period="2025 – Present",
-    one_liner="Solo-built AI-native validation platform — rough startup idea to evidence-backed verdict.",
+    one_liner="Co-founded AI-native validation platform — rough startup idea to evidence-backed verdict.",
     bullets=[
         "Shipped end-to-end: NestJS API, Next.js 15 console, Docker Compose + Caddy infra.",
         "BullMQ multi-agent pipeline mining Reddit signals through multi-provider LLMs (OpenAI + Anthropic via LangChain).",
@@ -204,9 +204,9 @@ GOVALIDATE = ProjectEntry(
 
 VIDEO_KE = ProjectEntry(
     name="VEngine",
-    role="Solo · Data pipelines + AI",
+    role="Engineer (team of 3) · Data pipelines + AI",
     period="2026",
-    one_liner="Solo-built video knowledge engine — turns video into a searchable, clip-level knowledge graph.",
+    one_liner="Video knowledge engine, built with a small team of three — turns video into a searchable, clip-level knowledge graph.",
     bullets=[
         "9-stage BullMQ pipeline: FFmpeg → chunking → parallel Deepgram / Google STT → Gemini / GPT-4o summarization → embeddings → knowledge-graph + dendrogram.",
         "Swappable providers across STT, LLM and embeddings; A/B comparison built in.",

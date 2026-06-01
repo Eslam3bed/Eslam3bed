@@ -253,7 +253,7 @@ export const selectedProjects: Project[] = [
   {
     id: "sp-govalidate",
     name: "GoValidate",
-    role: "Solo Builder · Full-Stack + LLM Orchestration",
+    role: "Co-founder · Full-Stack + LLM Orchestration",
     description:
       "AI-native startup validation platform that turns a rough idea into an evidence-backed verdict on demand, competition, risk, and next steps",
     technologies: [
@@ -272,12 +272,12 @@ export const selectedProjects: Project[] = [
     link: "https://govalidate.dev",
     screenshot: govalidateScreenshot,
     details:
-      "Designed and shipped the platform end-to-end: BullMQ-orchestrated multi-agent pipeline that mines Reddit signals, generates and scores ideas with multi-provider LLMs (OpenAI + Anthropic via LangChain), persists per-job artifacts, and runs hybrid vector + keyword search over Qdrant embeddings. Owns infra (Docker Compose, Caddy), source-credibility scoring, and the Next.js admin/console.",
+      "Co-founded and shipped the platform end-to-end: BullMQ-orchestrated multi-agent pipeline that mines Reddit signals, generates and scores ideas with multi-provider LLMs (OpenAI + Anthropic via LangChain), persists per-job artifacts, and runs hybrid vector + keyword search over Qdrant embeddings. Owns infra (Docker Compose, Caddy), source-credibility scoring, and the Next.js admin/console.",
   },
   {
     id: "sp-vengine",
     name: "VEngine",
-    role: "Solo Builder · Data Pipelines + AI",
+    role: "Engineer (team of 3) · Data Pipelines + AI",
     description:
       "Video knowledge engine — a 4-phase pipeline (ingestion, processing, dendrogram, search index) that transcribes, summarizes, embeds and clusters video into a searchable, clip-level knowledge graph",
     technologies: [
