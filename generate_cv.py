@@ -39,7 +39,11 @@ class Variant:
     headline: str
     bio: str
     skills: List[Tuple[str, str]]
+    mannar_role: str
+    mannar_bullets: List[str]
     revic_bullets: List[str]
+    weart_role: str
+    weart_bullets: List[str]
     projects_intro: str
     projects: List[ProjectEntry]
 
@@ -65,8 +69,9 @@ class CV(FPDF):
         self.cell(self.get_string_width(company), 7, company, link=link or "")
         self.set_text_color(50, 50, 50)
         self.set_font(FONT, "", 10)
-        loc_text = f"  – {location}"
-        self.cell(self.get_string_width(loc_text) + 2, 7, loc_text)
+        if location:
+            loc_text = f"  – {location}"
+            self.cell(self.get_string_width(loc_text) + 2, 7, loc_text)
         self.set_font(FONT, "I", 10)
         self.set_text_color(80, 80, 80)
         self.cell(0, 7, period, align="R", new_x=XPos.LMARGIN, new_y=YPos.NEXT)
@@ -139,6 +144,16 @@ MANNAR_BULLETS = [
     "Implemented SEO scripts and post-build meta-tag injection.",
 ]
 
+MANNAR_BULLETS_MLOPS = [
+    "Owned end-to-end SWE: services, frontend architecture and the deployment pipeline for a high-trust legal platform.",
+    "Owned platform security, compliance and performance work.",
+    "Managed infrastructure, monitoring and observability for production traffic.",
+    "Built and tuned CI/CD pipelines with regression-test gates and rollback paths to shorten the deploy cycle safely.",
+    "Scaled the platform from pilot to thousands of active users.",
+    "Designed and shipped the notification system with retry, dead-lettering and audit logging.",
+    "Implemented SEO scripts and post-build meta-tag injection.",
+]
+
 REVIC_BULLETS_PRIMARY = [
     "Built the data-ingestion services that stream from various integration tools into the analytics platform.",
     "Built debugging tools that surface and resolve data-integrity issues across the pipeline.",
@@ -163,6 +178,12 @@ WEART_BULLETS = [
     "Recovered a real-estate project with a refactoring plan that reduced technical debt and shortened time-to-feature.",
     "Built features and responsive UI components alongside the platform refactor.",
     "Improved product performance and developer-experience around the codebase.",
+]
+
+WEART_BULLETS_MLOPS = [
+    "Recovered a real-estate project with a refactoring plan that reduced technical debt and shortened time-to-feature.",
+    "Built features end-to-end alongside the platform refactor; expanded unit, integration and regression test coverage.",
+    "Improved product performance, build pipelines and developer-experience around the codebase.",
 ]
 
 LEADCART_BULLETS = [
@@ -283,7 +304,7 @@ DENTURE = ProjectEntry(
 
 
 PROJECTS_PRIMARY = [GOVALIDATE, VIDEO_KE, QUIQ, PUEF, STORY_TELLER, SHORTS_GEN, DENTURE]
-PROJECTS_MLOPS = [VIDEO_KE, GOVALIDATE, DENTURE, QUIQ, PUEF, STORY_TELLER, SHORTS_GEN]
+PROJECTS_MLOPS = [VIDEO_KE, GOVALIDATE, QUIQ, PUEF, STORY_TELLER, SHORTS_GEN]
 
 
 # -----------------------------------------------------------------------------
@@ -311,34 +332,44 @@ PRIMARY = Variant(
         ("Security: ", "Auth0 / Clerk integrations, JWT / OAuth, RBAC, input validation & sanitization, CORS / CSP, secure data handling."),
         ("Practices: ", "End-to-end ownership, internal tooling and dashboards, technical mentoring, code reviews, unit + integration testing."),
     ],
+    mannar_role="Sr. Front-end Engineer & DevOps",
+    mannar_bullets=MANNAR_BULLETS,
     revic_bullets=REVIC_BULLETS_PRIMARY,
+    weart_role="Sr. Front-End Developer",
+    weart_bullets=WEART_BULLETS,
     projects_intro="A selection of work I have built solo or led.",
     projects=PROJECTS_PRIMARY,
 )
 
 MLOPS = Variant(
     slug="mlops",
-    headline="Engineer for Data Pipelines, ML Tooling & Infrastructure",
+    headline="MLOps & Software Engineer · Data Pipelines · Production ML Infrastructure",
     bio=(
-        "Engineer with 10+ years building data-ingestion pipelines, internal tooling and "
-        "the infrastructure around ML systems. I write production Python and TypeScript "
-        "services that move data through queues (BullMQ, Kafka), persist it across "
-        "MongoDB / Elasticsearch / vector stores, and surface it to ML and research "
-        "teams through dashboards, debugging tools and APIs. I own the DevOps side too "
-        "— Docker, CI/CD, AWS / GCP — so the pipelines I build actually run in "
-        "production. Comfortable building the platform front-ends that wrap this work, "
-        "including custom annotation tooling."
+        "Software engineer with 10+ years building data-ingestion pipelines, internal "
+        "tooling and the infrastructure around ML systems. I write production Python "
+        "and TypeScript services that move data through queues (BullMQ, Kafka), persist "
+        "it across MongoDB / Elasticsearch / vector stores, and surface it to ML and "
+        "research teams through dashboards, debugging and integrity tooling. I own the "
+        "deployment side end-to-end — Docker, CI/CD with regression-test gates, "
+        "monitoring, AWS / GCP, Cloud Run — so the pipelines I build actually ship, "
+        "version cleanly and roll back safely in production."
     ),
     skills=[
-        ("Data & MLOps: ", "Production Python (pandas, NumPy, Open3D, pytest); data-ingestion pipelines; queue-based orchestration (BullMQ; concepts transfer to Airflow / Prefect); vector stores (Qdrant, Pinecone); embeddings; Deepgram / Google STT; debugging + integrity tooling for ML teams."),
-        ("Cloud & DevOps: ", "AWS (S3, IAM, Fargate), Google Cloud (Cloud Run, GCS), Azure Functions, Docker, Docker Compose, CI/CD (GitHub Actions, Jenkins, Railway), monitoring & logging."),
+        ("Data & MLOps: ", "Production Python (pandas, NumPy, Open3D, pytest); data-ingestion pipelines; data quality, schema validation and integrity checks; queue-based orchestration (BullMQ; concepts transfer to Airflow / Prefect); vector stores (Qdrant, Pinecone); embeddings; Deepgram / Google STT; debugging + integrity tooling for ML teams."),
+        ("Deployment & Reliability: ", "CI/CD with regression-test gates, containerized services (Docker, Docker Compose), blue/green and rollback-friendly releases, monitoring & logging, observability for data pipelines, on-call experience."),
+        ("Cloud & Infra: ", "AWS (S3, IAM, Fargate), Google Cloud (Cloud Run, GCS), Azure Functions, GitHub Actions, Jenkins, Railway."),
         ("Languages & Frameworks: ", "Python, TypeScript, Node.js, NestJS, Flask, FastAPI-style services, React, Next.js."),
         ("Storage & Search: ", "MongoDB, PostgreSQL, MySQL, CosmosDB, Redis, Elasticsearch, Kafka, Qdrant."),
+        ("Testing & Quality: ", "Unit + integration testing, regression suites, contract tests for ingestion pipelines, data-validation harnesses, code reviews."),
         ("LLM tooling (working knowledge): ", "Multi-provider LLM gateways (OpenAI, Anthropic, Gemini) via LangChain; RAG; prompt fixers / evaluation loops; agentic pipelines."),
-        ("Practices: ", "Internal tooling and dashboards for research teams, custom annotation platforms, end-to-end ownership, code reviews, mentoring."),
+        ("Practices: ", "Internal tooling and dashboards for research teams, custom annotation platforms, end-to-end ownership, mentoring."),
     ],
+    mannar_role="Sr. Software Engineer & DevOps",
+    mannar_bullets=MANNAR_BULLETS_MLOPS,
     revic_bullets=REVIC_BULLETS_MLOPS,
-    projects_intro="A selection of pipelines and tooling I have built solo or led.",
+    weart_role="Sr. Software Engineer",
+    weart_bullets=WEART_BULLETS_MLOPS,
+    projects_intro="A selection of pipelines, tooling and deployments I have built solo or led.",
     projects=PROJECTS_MLOPS,
 )
 
@@ -384,10 +415,10 @@ def build_cv(variant: Variant) -> Path:
     pdf.section_title("Work Experience")
 
     pdf.company_header("Mannar.sa", "KSA (Remote)", "09/2025 - Present  ·  Part-Time", "https://mannar.sa/")
-    pdf.role_text("Sr. Front-end Engineer & DevOps")
+    pdf.role_text(variant.mannar_role)
     pdf.bullet("About: Saudi Arabia's first online legal-consultation platform; secure, scalable architecture for digital legal services.")
     pdf.bold_bullet("Achievements / responsibilities:", "")
-    for item in MANNAR_BULLETS:
+    for item in variant.mannar_bullets:
         pdf.sub_bullet(item)
     pdf.tech_line("TypeScript, Node.js, React, AWS, Supabase, Firebase, MongoDB, CI/CD.")
     pdf.ln(3)
@@ -402,10 +433,10 @@ def build_cv(variant: Variant) -> Path:
     pdf.ln(3)
 
     pdf.company_header("WeArt.io", "Berlin, Germany (Remote)", "02/2022 - 12/2022", "https://weart.io/about.html")
-    pdf.role_text("Sr. Front-End Developer")
+    pdf.role_text(variant.weart_role)
     pdf.bullet("About: development agency focused on shipping quality products.")
     pdf.bold_bullet("Achievements / responsibilities:", "")
-    for item in WEART_BULLETS:
+    for item in variant.weart_bullets:
         pdf.sub_bullet(item)
     pdf.tech_line("TypeScript, Node.js, Next.js, AWS Fargate, Jenkins, Docker, MySQL, GraphQL.")
     pdf.ln(3)
@@ -419,7 +450,7 @@ def build_cv(variant: Variant) -> Path:
     pdf.tech_line("Node.js, React, AWS, GitHub Actions, Netlify, Next.js, TypeScript, MongoDB, PostgreSQL.")
     pdf.ln(3)
 
-    pdf.company_header("Zaino", "Nazareth, Palestine", "05/2016 - 09/2019", "https://zaino.app/")
+    pdf.company_header("Zaino", "", "05/2016 - 09/2019", "https://zaino.app/")
     pdf.role_text("Full-Stack Engineer / Team Lead")
     pdf.bullet("About: platform that augments the Google Ads customer experience with templates and campaign tooling.")
     pdf.bold_bullet("Achievements / responsibilities:", "")

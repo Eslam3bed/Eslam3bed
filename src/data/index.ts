@@ -23,7 +23,7 @@ export interface WorkExperience {
   company: string;
   companyLink?: string;
   period: string;
-  location: string;
+  location?: string;
   highlights: string[];
   technologies: string;
   projects: Project[];
@@ -182,7 +182,6 @@ export const workExperience: WorkExperience[] = [
     company: "Zaino",
     companyLink: "https://zaino.app/",
     period: "May 2016 - Sep 2019",
-    location: "Nazareth, Palestine",
     highlights: [
       "Platform to enhance Google AdWords customer experience with templates and optimizations",
       "Designed & built mobile-friendly web app for Zaino clients to manage campaigns and design/launch banners",
