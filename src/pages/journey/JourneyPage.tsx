@@ -106,10 +106,12 @@ export const JourneyPage = () => {
                             <Calendar className="h-4 w-4" />
                             <span>{job.period}</span>
                           </div>
-                          <div className="flex items-center space-x-1">
-                            <MapPin className="h-4 w-4" />
-                            <span>{job.location}</span>
-                          </div>
+                          {job.location && (
+                            <div className="flex items-center space-x-1">
+                              <MapPin className="h-4 w-4" />
+                              <span>{job.location}</span>
+                            </div>
+                          )}
                         </div>
                       </div>
                     </div>
